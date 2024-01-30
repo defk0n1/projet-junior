@@ -32,10 +32,10 @@ body{
     color: aliceblue;
     font-family: 'Bebas Neue', sans-serif;
     font-size: larger;
-    width: 80vh;
+    width: 50vw;
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px red;
-    margin-top: 0;
+    margin-top: 10%;
     display: flex;
     flex-direction: column; 
     
@@ -51,7 +51,7 @@ body{
   
   .promo-text h1{
     font-weight: bold;
-    font-size: 100px;
+    font-size: 10vh;
     margin-bottom: 0;
     height: 1.1em;
 
@@ -59,6 +59,7 @@ body{
   .promo-text h2{
     margin-top: 0px;
     margin-bottom: 0px;
+    font-size: 3vh;
   }
 
 
