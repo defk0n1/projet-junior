@@ -32,10 +32,16 @@ body{
     color: aliceblue;
     font-family: 'Bebas Neue', sans-serif;
     font-size: larger;
-    width: 50%;
+    width: 80vh;
     letter-spacing: 1px;
     text-shadow: 2px 2px 5px red;
     margin-top: 0;
+    display: flex;
+    flex-direction: column; 
+    
+    
+    
+    
       
   
       
@@ -72,3 +78,5 @@ body{
     margin: 0 ;
     
   }
+
+
