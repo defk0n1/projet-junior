@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Motorcycles</title>
+    
+</head>
+<body>
+<div class="container-fluid p-0"></div>
+<div class="background-image"></div>
+
+    
+<div class="container">
+    <button id="scrollToBottomBtn" class="btn btn-danger btn-lg  position-fixed bottom-0 end-0 m-3 rounded-pill">View our catalogue <i class="bi bi-chevron-down"></i></button>
+    <div class="company-section">
+      <img src="your-company-image.jpg" alt="Company Image" class="company-image">
+      <div class="company-text">
+        <h2>Welcome to Our Company</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <p>Our company is committed to providing high-quality products/services to our clients. We value innovation, teamwork, and customer satisfaction.</p>
+      </div>
+    </div>
+</div>
+<div class="container mt-5">
+    <h3 class="display-2 text-center">Begin Your Journey</h3>
+
+    <div class="row mt-4">
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/bmw.png" alt="BMW Logo" class="img-fluid img-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/harley.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/honda.png" alt="Honda Logo" class="img-fluid img-logo" id="small-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+        
+        
+        
+    </div>
+
+    <div class="row mt-4 " id="lastligne">
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/suzuki.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+        
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/kawasaki.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+        <div class="col-lg-4 col-md-6 text-center">
+            <a href="#" target="_blank">
+                <img src="assets/yamaha.png" alt="Yamaha Logo" class="img-fluid img-logo" data-aos="fade-up"
+                data-aos-delay="10"
+                data-aos-duration="500">
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+    const aosElements = document.querySelectorAll('[data-aos]');
+    
+    aosElements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            element.setAttribute('data-aos', 'false'); // Change to the desired AOS animation type
+            AOS.refresh(); // Refresh AOS to apply the new animation
+        });
+
+        element.addEventListener('mouseleave', () => {
+            element.setAttribute('data-aos', 'fade-up'); // Disable AOS on hover out
+            AOS.refresh();
+        });
+    });
+</script>
+<script>
+    // Wait for the document to be ready
+    $(document).ready(function () {
+        // Show/hide scroll button based on scroll position
+        $(window).scroll(function () {
+          if ($(this).scrollTop() < 600) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
+            $('#scrollToBottomBtn').fadeIn();
+          } else {
+            $('#scrollToBottomBtn').fadeOut();
+          }
+        });
+      
+        // Smooth scroll to the bottom
+        $('#scrollToBottomBtn').click(function () {
+          $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
+          return false;
+        });
+      });
+  </script>
+
+</body>
+</html>
