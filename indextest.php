@@ -232,6 +232,7 @@ for ($x = 0; $x < 2; $x++) { ?>
 <?php } ?>
 <style>
     .slide-image{
+        border-radius: 50px;
         overflow:hidden;
         opacity: 0;
         transition: opacity 1s;
