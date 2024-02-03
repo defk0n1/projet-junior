@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Catalogue</title>
 
 </head>
 <body>
+
     <?php 
     $sp="See Products";
     $pn="Product Name";
@@ -19,7 +21,7 @@
     ?>
     <div id="animation">
     <div class="row text-start align-items-center gy-5 my-5">
-    <div class="col-12 col-md-6"><img src="P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image " alt=""></div>
+    <div class="col-12 col-md-6"><img src="P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
     <div class="col-12 col-md-6">
         <div>
             <h2 class="display-4">BMW</h2>
@@ -61,7 +63,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                 <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
             </div>
         </div>
-        <div class="col-12 col-md-6"><img src="harley.jpg" class="w-100 h-100 slide-image " alt=""></div>
+        <div class="col-12 col-md-6"><img src="harley.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
     </div>
     <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
     <?php  
@@ -90,7 +92,7 @@ for ($x = 0; $x < 2; $x++) { ?>
   
 <?php } ?>
     <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6"><img src="honda.png"class="w-100 h-100 slide-image" alt=""></div>
+        <div class="col-12 col-md-6"><img src="honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
         <div class="col-12 col-md-6">
             <div>
                 <h2 class="display-4">HONDA</h2>
@@ -131,7 +133,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                     <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6"><img src="suzuki.jpg" class="w-100 h-100 slide-image " alt=""></div>
+            <div class="col-12 col-md-6"><img src="suzuki.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
         </div>
         <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
         <?php  
@@ -161,7 +163,7 @@ for ($x = 0; $x < 2; $x++) { ?>
 <?php } ?>
     
         <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6"><img src="kawasaki.jpg"class="w-100 h-100 slide-image " alt=""></div>
+            <div class="col-12 col-md-6"><img src="kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
             <div class="col-12 col-md-6">
                 <div>
                     <h2 class="display-4">KAWASAKI</h2>
@@ -202,7 +204,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                         <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6"><img src="yamaha.webp" class="w-100 h-100 slide-image " alt=""></div>
+                <div class="col-12 col-md-6"><img src="yamaha.webp" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
             </div>
             <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
             <?php  
@@ -232,6 +234,7 @@ for ($x = 0; $x < 2; $x++) { ?>
 <?php } ?>
 <style>
     .slide-image{
+        border-radius: 50px;
         overflow:hidden;
         opacity: 0;
         transition: opacity 1s;
@@ -259,6 +262,10 @@ for ($x = 0; $x < 2; $x++) { ?>
         );
     }
 });
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
 </script>
         
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
