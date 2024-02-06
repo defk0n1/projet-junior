@@ -36,9 +36,9 @@
           <video autoplay loop muted plays-inline class="back-video">
                 <source src="avideo.mp4" type="video/mp4">
           </video>
-          <div class="nav-wrapper">
-            <!-- <div class="nav-logo">
-            </div> -->
+          <!-- <div class="nav-wrapper">
+            <div class="nav-logo">
+            </div>
             <div class="nav-list">
                 <div class="nav-elt"><a href="#" class="link">HOME</a></div>
                 <div class="nav-elt"><a href="#" class="link">ABOUT</a></div>
@@ -46,7 +46,7 @@
                 <div class="nav-elt"><a href="#" class="link">CONTACT</a></div>
 
             </div>
-        </div>
+        </div> -->
             <div class="logo"><img src="assets/logo.png" alt="Logo"></div>
           <div class="promo-text"><h1>REV UP YOUR RIDE</h1>
                 <h2>Discover the thrill of the open road with our exclusive selection of <strong>top-notch motorbikes.</strong>
