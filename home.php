@@ -64,7 +64,7 @@
     <div class="content">
         <div class="vid-wrapper">
           <video autoplay loop muted plays-inline class="back-video">
-                <source src="avideo.mp4" type="video/mp4">
+                <source src="assets/video.mp4" type="video/mp4">
           </video>
           <!-- <div class="nav-wrapper">
             <div class="nav-logo">
