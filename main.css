@@ -3,7 +3,7 @@ html, body {
   height:100%;
 }
 
-body {
+#prod_section {
    
     background: rgb(193,182,182);
     background: linear-gradient(90deg, rgba(193,182,182,1) 0%, rgba(212,141,99,1) 35%, rgba(183,18,52,1) 100%);

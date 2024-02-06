@@ -83,7 +83,7 @@
     $p="Price: XXX"
     ?>
     
-    <div class="row text-start align-items-center gy-5 my-5">
+    <div id="prod_section" class="row text-start align-items-center gy-5 my-5">
     <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
     <div class="col-12 col-md-6">
         <div>
