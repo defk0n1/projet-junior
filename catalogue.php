@@ -19,7 +19,7 @@
     $m="Mileage: XXX";
     $p="Price: XXX"
     ?>
-    <div id="animation">
+    
     <div class="row text-start align-items-center gy-5 my-5">
     <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
     <div class="col-12 col-md-6">
@@ -27,7 +27,6 @@
             <h2 class="display-4">BMW</h2>
             <p>BMW Motorrad, the motorcycle division of BMW, is renowned for blending performance, technology, and luxury. Offering a diverse lineup, from sport bikes to adventure models, BMW motorcycles are known for innovative engineering and distinctive design.</p>
         </div>
-    </div>
     </div>
     <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
     <?php  
@@ -51,9 +50,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                 </div>
             </div>
     <?php } ?>
-        </div>
-        </div>
-  
+    </div>
 <?php } ?>
     <div class="row text-start align-items-center gy-5 my-5">
         <div class="col-12 col-md-6">
