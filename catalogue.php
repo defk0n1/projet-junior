@@ -292,7 +292,7 @@ for ($x = 0; $x < 2; $x++) { ?>
         </div>
         <section id="footer">
         <div class="containerr">
-            <div class="contentt">
+            <div class="contentt">  
                 <div class="left-side">
                     <div class="address details">
                         <i class="fas fa-map-marker-alt"></i>
