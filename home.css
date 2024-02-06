@@ -1,0 +1,50 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smoth;
+    font-family: "Jost", sans-serif;
+    list-style: none;
+
+
+
+
+}
+
+
+
+.header{  position: fixed;
+    top: 0;
+    left:0;
+    width: 100%;
+    padding: 20px 10%;
+    background-color:transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+   
+
+
+    
+    }
+.navbar a{
+    font-size: medium;
+    color: rgb(255, 255, 255);
+    text-decoration:dotted;
+    font-weight: 500;
+    margin-left: 35px;
+}
+.logo{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-decoration: dotted;
+    font-weight: 700;
+
+}
+
+
+ a:hover{
+    color: #e40505;
+ }
