@@ -153,8 +153,8 @@
           </div>
       </div>
       <section id="footer">
-        <div class="container">
-            <div class="content">
+        <div class="containerr">
+            <div class="contentt">
                 <div class="left-side">
                     <div class="address details">
                         <i class="fas fa-map-marker-alt"></i>
