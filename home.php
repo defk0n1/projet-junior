@@ -21,7 +21,7 @@
 <body>
 <header class="header">
             
-            <a href="#" class="logo">catalogue</a>
+            <a href="#" class="logo">PLACEHOLDER</a>
             <div>
             <input type="search" id="search" value="" onchange="ouvrirpage()" >
             <a href="#"> <i class='bx bx-search-alt-2'></i></a>
@@ -51,7 +51,7 @@
              
             <a href="#" class="active">Home</a>
         
-            <a href="#">catalogue</a>
+            <a href="catalogue.php">Catalogue</a>
             <a href="#">Contact</a>
             
            
