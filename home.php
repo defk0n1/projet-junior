@@ -1,2 +1,1 @@
-<?php
-    require ('index.php'); ?>
+
