@@ -18,11 +18,10 @@
     $c="Condition: XXX";
     $m="Mileage: XXX";
     $p="Price: XXX"
-    
     ?>
     <div id="animation">
     <div class="row text-start align-items-center gy-5 my-5">
-    <div class="col-12 col-md-6"><img src="P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
+    <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
     <div class="col-12 col-md-6">
         <div>
             <h2 class="display-4">BMW</h2>
@@ -34,14 +33,13 @@
     <?php  
 for ($x = 0; $x < 2; $x++) { ?>
     
-    
 	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
-                <div class="card-body">
+                <div class="card-body" id="<?php $i ?>">
                     <p class="card-text fw-bold">
                     <?php echo($pn) ?>
                     </p>
@@ -64,7 +62,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                 <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
             </div>
         </div>
-        <div class="col-12 col-md-6"><img src="harley.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
+        <div class="col-12 col-md-6"><img src="assets/harley.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
     </div>
     <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
     <?php  
@@ -75,7 +73,7 @@ for ($x = 0; $x < 2; $x++) { ?>
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
                 <div class="card-body">
                     <p class="card-text fw-bold">
@@ -93,7 +91,7 @@ for ($x = 0; $x < 2; $x++) { ?>
   
 <?php } ?>
     <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6"><img src="honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
+        <div class="col-12 col-md-6"><img src="assets/honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
         <div class="col-12 col-md-6">
             <div>
                 <h2 class="display-4">HONDA</h2>
@@ -110,7 +108,7 @@ for ($x = 0; $x < 2; $x++) { ?>
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
                 <div class="card-body">
                     <p class="card-text fw-bold">
@@ -134,18 +132,16 @@ for ($x = 0; $x < 2; $x++) { ?>
                     <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
                 </div>
             </div>
-            <div class="col-12 col-md-6"><img src="suzuki.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
+            <div class="col-12 col-md-6"><img src="assets/suzuki.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
         </div>
         <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
         <?php  
 for ($x = 0; $x < 2; $x++) { ?>
-    
-    
 	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
                 <div class="card-body">
                     <p class="card-text fw-bold">
@@ -164,7 +160,7 @@ for ($x = 0; $x < 2; $x++) { ?>
 <?php } ?>
     
         <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6"><img src="kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
+            <div class="col-12 col-md-6"><img src="assets/kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
             <div class="col-12 col-md-6">
                 <div>
                     <h2 class="display-4">KAWASAKI</h2>
@@ -181,7 +177,7 @@ for ($x = 0; $x < 2; $x++) { ?>
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
                 <div class="card-body">
                     <p class="card-text fw-bold">
@@ -205,7 +201,7 @@ for ($x = 0; $x < 2; $x++) { ?>
                         <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
                     </div>
                 </div>
-                <div class="col-12 col-md-6"><img src="yamaha.webp" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
+                <div class="col-12 col-md-6"><img src="assets/yamaha.webp" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
             </div>
             <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
             <?php  
@@ -216,7 +212,7 @@ for ($x = 0; $x < 2; $x++) { ?>
     <?php for ($i = 0;$i< 3;$i++) { ?>
             <div class="card m-2">
                 <a href="">
-                    <img src="insert.jpg" class="card-img-top" height="300" alt="Product">
+                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
                 </a>
                 <div class="card-body">
                     <p class="card-text fw-bold">
@@ -237,33 +233,8 @@ for ($x = 0; $x < 2; $x++) { ?>
     .slide-image{
         border-radius: 50px;
         overflow:hidden;
-        opacity: 0;
-        transition: opacity 1s;
     }
 </style>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-    var slideImages = document.querySelectorAll(".slide-image");
-
-    window.addEventListener("scroll", function() {
-        slideImages.forEach(function(img) {
-            if (isElementInViewport(img)) {
-                img.style.opacity = 1; // Make image visible when it enters the viewport
-            }
-        });
-    });
-
-    function isElementInViewport(el) {
-        var rect = el.getBoundingClientRect();
-        return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-        );
-    }
-});
-</script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
