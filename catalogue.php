@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style> <?php include 'catalogue.css'; ?> </style>
+    <style> <?php include 'main.css'; ?> </style>
     <title>Catalogue</title>
 
 </head>
