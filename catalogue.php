@@ -290,7 +290,11 @@ for ($x = 0; $x < 2; $x++) { ?>
             </div>
     <?php } ?>
         </div>
-        <section id="footer">
+        
+
+  
+<?php } ?>
+<section id="footer">
         <div class="containerr">
             <div class="contentt">  
                 <div class="left-side">
@@ -349,9 +353,6 @@ for ($x = 0; $x < 2; $x++) { ?>
             <p class="copyright">© 2024</p>   
         </div>
     </section>
-
-  
-<?php } ?>
 <style>
     .slide-image{
         border-radius: 50px;
