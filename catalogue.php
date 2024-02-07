@@ -43,21 +43,34 @@
                 if(a=='motos'){
                   window.open("/index.html");
                 }
-
               }
             </script>
-          
             <nav class="navbar">
-             
-            <a href="#" class="active">Home</a>
-        
-            <a href="#">catalogue</a>
-            <a href="#">Contact</a>
-            
-           
-            
-            
-            
+                <a href="#" class="active">Home</a>
+                <a href="#">Catalogue</a>
+                <a href="#">Contact</a>
+                <i class='bx bx-shopping-bag' ></i>
+                <!-- Cart -->
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- Content -->
+                    <div class="cart-content">
+
+                        <div class="cart-box">
+                            <img src="assets/insert.jpg" alt="" class="cart-img">
+                            <div class="detail-box">
+                                <div class="cart-product-title">BMW 1000cc</div>
+                                <div class="cart-product-condition">New</div>
+                                <div class="cart-product-mileage">-</div>
+                                <div class="cart-product-price">$1200</div>
+                            </div>
+                            <!-- Remove Cart -->
+                            <i class='bx bxs-trash-alt cart-remove'></i>
+                        </div>
+                    </div>
+                    <!-- Total -->
+                    <div class="total"></div>
+                </div>
             </nav>
         
     </header> 
