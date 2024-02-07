@@ -66,8 +66,8 @@
             <div class="main-text">
                 
                 <div><h5 class="letter">MOTOS COLLECTION</h5></div>
-                <div> <h1 class="word">NOUVELLE <br> COLLECTION <br>A DECOUVRIR</h1></div>
-                <div><p >N'HESITER PAS </p></div>
+                <div> <h1 class="word">NEW <br> COLLECTION <br>TO DISCOVER</h1></div>
+                <div><p >DO NOT HESITATE </p></div>
                 
                 <a href="#" class="main-btn">SHOP NOW<i class='bx bx-right-arrow-alt'></i></a>
                
@@ -86,7 +86,7 @@
     $p="Price: XXX"
     ?>
     
-    <div id="prod_section" class="row text-start align-items-center gy-5 my-5">
+    <div id="prod_section" class="row text-start align-items-center gy-5 my-0">
     <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
     <div class="col-12 col-md-6">
         <div>
@@ -154,7 +154,7 @@ for ($x = 0; $x < 2; $x++) { ?>
   
 <?php } ?>
     <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6"><img src="assets/honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
+        <div class="col-12 col-md-6"><img src="assets/honda1.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
         <div class="col-12 col-md-6">
             <div>
                 <h2 class="display-4">HONDA</h2>
