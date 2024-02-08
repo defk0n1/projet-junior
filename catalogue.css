@@ -16,7 +16,7 @@
     
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-.container{
+.containerr{
     width: 60%;
     background: #dcdada;
     height: 330px;
@@ -25,29 +25,29 @@
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     margin-top: -120px;
 }
-.container .content{
+.containerr .contentt{
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-.container .content .left-side{
+.containerr .contentt .left-side{
     width: 25%;
     height: 80%;   
 }
-.content .left-side .details{
+.contentt .left-side .details{
     margin: 14px;
     text-align: center;
 }
-.content .left-side .details i{
+.contentt .left-side .details i{
     font-size: 30px;
     color: #ec6868;
     margin-bottom: 10px;
 }
-.content .left-side .details .topic{
+.contentt .left-side .details .topic{
     font-size: 18px;
     font-weight: 500;
 }
-.content .left-side::before{
+.contentt .left-side::before{
     content: '';
     position: absolute;
     height: 70%;
@@ -57,17 +57,17 @@
     transform: translateY(-50%);
     background: #afafb6;
   }
-.content .left-side .details .text-one,
-.content .left-side .details .text-two{
+.contentt .left-side .details .text-one,
+.contentt .left-side .details .text-two{
   font-size: 14px;
   color: #6d6d72;
 }
-.container .content .right-side {
+.containerr .content .right-side {
     width: 75%;
     height: 100%; 
     margin-left: 75px;  
 }
-.content .right-side .topic-text {
+.contentt .right-side .topic-text {
     font-size: 30px;
     font-weight: 600;
     color:#ee5555 ;
