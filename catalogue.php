@@ -55,17 +55,7 @@
                     <h2 class="cart-title">Your Cart</h2>
                     <!-- Content -->
                     <div class="cart-content">
-                        <div class="cart-box">
-                            <img src="assets/insert.jpg" alt="" class="cart-img">
-                            <div class="detail-box">
-                                <div class="cart-product-title">BMW 1000cc</div>
-                                <div class="cart-product-condition">New</div>
-                                <div class="cart-product-mileage">-</div>
-                                <div class="cart-product-price">$1200</div>
-                            </div>
-                            <!-- Remove Cart -->
-                            <i class='bx bxs-trash-alt cart-remove'></i>
-                        </div>
+                        
                     </div>
                     <!-- Total -->
                     <div class="total">
@@ -117,13 +107,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    
@@ -140,13 +130,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    
@@ -164,13 +154,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    
@@ -187,13 +177,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    
@@ -210,13 +200,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    
@@ -233,13 +223,13 @@
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
         <div class="brand-product">
-            <img src="assets/insert.jpg" alt="product">
+            <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
-                <p>Condition: XXX</p>
-                <p>Mileage: XXX</p>
-                <p>Price: XXX</p>
-                <button class="add-cart"><a href="">Buy</a></button>
+                <p class="product-condition">Condition: XXX</p>
+                <p class="product-mileage">Mileage: XXX</p>
+                <p class="product-price">Price: XXX</p>
+                <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
     <?php } ?>    

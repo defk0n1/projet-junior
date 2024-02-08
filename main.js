@@ -45,8 +45,39 @@ function addCartClicked(event) {
     var button = event.target;
     var shopProducts = button.parentElement;
     var title = shopProducts.getElementsByClassName("product-name")[0].innerHTML;
-    console.log(title);
+    var condition = shopProducts.getElementsByClassName("product-condition")[0].innerHTML;
+    var mileage = shopProducts.getElementsByClassName("product-mileage")[0].innerHTML;
+    var price = shopProducts.getElementsByClassName("product-price")[0].innerHTML;
+    /* var productImg = shopProducts.getElementsByClassName("product-img")[0].src; */
+    var productImg = document.getElementById("product-img").src;
+    addProductToCart (title, price,condition, mileage, productImg);
+    updatetotal();
+}
+function addProductToCart (title, price, productImg) {
+    var cartShopBox = document.createElement("div");
+    cartShopBox.classList.add('cart-box')
+    var cartItems = document.getElementsByClassName("cart-content" )[0];
+    var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+    for (var i = 0; i < cartItemsNames.length; i++) {
+        alert("You have already add this item to cart");
+        return;
     }
+}
+var cartBoxContent=`
+                            <img src="${productImg}" alt="" class="cart-img">
+                            <div class="detail-box">
+                                <div class="cart-product-title">${title}</div>
+                                <div class="cart-product-condition">${condition}</div>
+                                <div class="cart-product-mileage">${mileage}</div>
+                                <div class="cart-product-price">${price}</div>
+                            </div>
+                            <!-- Remove Cart -->
+                            <i class='bx bxs-trash-alt cart-remove'></i>`
+cartShopBox.innerHTML = cartBoxContent;
+cartItems.append (cartShopBox);
+cartShopBox
+    .getElementsByClassName("cart-remove")[0]
+    .addEventListener("click", removeCartItem);
 // Update Total
 function updatetotal() {
     var cartContent = document.getElementsByClassName("cart-content")[0];
