@@ -28,20 +28,84 @@ html, body {
 .cart{
     position:fixed;
     top: 0;
-    right: 0;
+    right: -100%;
     width: 400px;
     min-height: 100vh;
     padding: 20px;
     background: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
+    transition: 0.3s;
+}
+.cart.active{
+    right: 0;
 }
 .cart-title{
     text-align: center;
     font-size: 1.5rem;
     font-weight: 600;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.cart-box {
+    display: grid;
+    grid-template-columns: 32% 20% 10%;
+    align-items: center;
+    gap: 85px;
     margin-top: 1rem;
 }
-.cart-img{
-    width: 200px;
-    height: auto;
+.cart-img {
+    width: 200;
+    height: 200px;
+    object-fit: contain;
+}
+.detail-box {
+    display: grid;
+    row-gap: 0.5rem;
+    }
+.cart-product-title {
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+.cart-price{
+    font-size: 500;
+}
+.cart-remove {
+    font-size: 24px;
+    color:brown;
+    cursor: pointer;
+}
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top: 1px solid black;
+}
+.total-title {
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price {
+    margin-left: 0.5rem;
+}
+.btn-buy {
+    display: flex;
+    margin: 1.5rem auto 0 auto; 
+    padding: 12px 20px;
+    border: none;
+    background: brown;
+    color: white;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+.btn-buy:hover{
+    background: black;
+}
+#close-cart{
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    Font-size: 2rem;
+    color: black;
+    cursor: pointer;
 }

@@ -49,13 +49,12 @@
                 <a href="#" class="active">Home</a>
                 <a href="#">Catalogue</a>
                 <a href="#">Contact</a>
-                <i class='bx bx-shopping-bag' ></i>
+                <i class='bx bx-shopping-bag' id="cart-icon" ></i>
                 <!-- Cart -->
                 <div class="cart">
                     <h2 class="cart-title">Your Cart</h2>
                     <!-- Content -->
                     <div class="cart-content">
-
                         <div class="cart-box">
                             <img src="assets/insert.jpg" alt="" class="cart-img">
                             <div class="detail-box">
@@ -69,7 +68,14 @@
                         </div>
                     </div>
                     <!-- Total -->
-                    <div class="total"></div>
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <button type="button" class="btn-buy">Buy Now</button>
+                    <!-- Cart Close -->
+                    <i class='bx bx-x' id="close-cart"></i>
                 </div>
             </nav>
         
@@ -375,8 +381,8 @@ for ($x = 0; $x < 2; $x++) { ?>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-</script>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</script>        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="main.js"></script>
 </body>
 </html>
