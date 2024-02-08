@@ -105,214 +105,145 @@
     $p="Price: XXX"
     ?>
     
-    <div id="prod_section" class="row text-start align-items-center gy-5 my-0">
-    <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-    <div class="col-12 col-md-6">
-        <div>
-            <h2 class="display-4">BMW</h2>
-            <p>BMW Motorrad, the motorcycle division of BMW, is renowned for blending performance, technology, and luxury. Offering a diverse lineup, from sport bikes to adventure models, BMW motorcycles are known for innovative engineering and distinctive design.</p>
-        </div>
-    </div>
-    <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-    <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body" id="<?php $i ?>">
-                    <p class="card-text fw-bold">
-                    <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>BMW</h1>
+                <p>BMW Motorrad, the motorcycle division of BMW, is renowned for blending performance, technology, and luxury. Offering a diverse lineup, from sport bikes to adventure models, BMW motorcycles are known for innovative engineering and distinctive design.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
             </div>
-    <?php } ?>
+           
     </div>
-<?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6">
-            <div>
-                <h2 class="display-4">Harley-Davidson</h2>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
+            </div>
+        </div>
+    <?php } ?>    
+    </div>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/harley.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>Harley-Davidson</h1>
                 <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
             </div>
-        </div>
-        <div class="col-12 col-md-6"><img src="assets/harley.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
+           
     </div>
-    <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-    <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
             </div>
-    <?php } ?>
         </div>
-  
-<?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6"><img src="assets/honda1.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-        <div class="col-12 col-md-6">
-            <div>
-                <h2 class="display-4">HONDA</h2>
+    <?php } ?>    
+    </div>
+    
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/honda1.png" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>HONDA</h1>
                 <p>Honda Motor Company, renowned for engineering excellence, offers a wide range of motorcycles. From commuter-friendly scooters to high-performance sport bikes and touring motorcycles, Honda caters to diverse rider preferences.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
             </div>
         </div>
+    <?php } ?>    
+    </div>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/suzuki.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>SUZUKI</h1>
+                <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
+            </div>
         </div>
-        <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-        <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
+    <?php } ?>    
+    </div>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/kawasaki.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>KAWASAKI</h1>
+                <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
             </div>
-    <?php } ?>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
+            </div>
         </div>
-  
-<?php } ?>
-        <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6">
-                <div>
-                    <h2 class="display-4">SUZUKI</h2>
-                    <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
-                </div>
+    <?php } ?>    
+    </div>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/yamaha.webp" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>YAMAHA</h1>
+                <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
             </div>
-            <div class="col-12 col-md-6"><img src="assets/suzuki.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php for ($i = 0;$i< 4;$i++) { ?>
+        <div class="brand-product">
+            <img src="assets/insert.jpg" alt="product">
+            <div class="product-desc">
+                <h1 class="product-name">PRODUCT NAME</h1>
+                <p>Condition: XXX</p>
+                <p>Mileage: XXX</p>
+                <p>Price: XXX</p>
+                <button class="add-cart"><a href="">Buy</a></button>
+            </div>
         </div>
-        <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-        <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-    
-        <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6"><img src="assets/kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-            <div class="col-12 col-md-6">
-                <div>
-                    <h2 class="display-4">KAWASAKI</h2>
-                    <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>
-                </div>
-            </div>
-            </div>
-            <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-            <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-            <div class="row text-start align-items-center gy-5 my-5">
-                <div class="col-12 col-md-6">
-                    <div>
-                        <h2 class="display-4">YAMAHA</h2>
-                        <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6"><img src="assets/yamaha.webp" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
-            </div>
-            <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-            <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-        
-
-  
-<?php } ?>
+    <?php } ?>    
+    </div>
 <section id="footer">
         <div class="containerr">
             <div class="contentt">  
