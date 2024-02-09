@@ -50,20 +50,22 @@ function addCartClicked(event) {
     var price = shopProducts.getElementsByClassName("product-price")[0].innerHTML;
     /* var productImg = shopProducts.getElementsByClassName("product-img")[0].src; */
     var productImg = document.getElementById("product-img").src;
-    addProductToCart (title, price,condition, mileage, productImg);
+    console.log(title, price,condition, mileage, productImg);
+    addProductToCart(title, price,condition, mileage, productImg);
     updatetotal();
 }
-function addProductToCart (title, price, productImg) {
+function addProductToCart(title, price,condition, mileage, productImg) {
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add('cart-box')
     var cartItems = document.getElementsByClassName("cart-content" )[0];
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
     for (var i = 0; i < cartItemsNames.length; i++) {
+        if (cartItemsNames[i].innerText == title){
         alert("You have already add this item to cart");
         return;
+        }
     }
-}
-var cartBoxContent=`
+    var cartBoxContent=`
                             <img src="${productImg}" alt="" class="cart-img">
                             <div class="detail-box">
                                 <div class="cart-product-title">${title}</div>
@@ -72,12 +74,14 @@ var cartBoxContent=`
                                 <div class="cart-product-price">${price}</div>
                             </div>
                             <!-- Remove Cart -->
-                            <i class='bx bxs-trash-alt cart-remove'></i>`
-cartShopBox.innerHTML = cartBoxContent;
-cartItems.append (cartShopBox);
-cartShopBox
-    .getElementsByClassName("cart-remove")[0]
-    .addEventListener("click", removeCartItem);
+                            <i class='bx bxs-trash-alt cart-remove'></i>`;
+    cartShopBox.innerHTML = cartBoxContent;
+    cartItems.append(cartShopBox);
+    cartShopBox
+        .getElementsByClassName("cart-remove")[0]
+        .addEventListener("click", removeCartItem);
+}
+
 // Update Total
 function updatetotal() {
     var cartContent = document.getElementsByClassName("cart-content")[0];

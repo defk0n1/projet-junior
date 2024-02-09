@@ -109,10 +109,10 @@
         <div class="brand-product">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
+                <h1 class="product-name">BMW 1000CC</h1>
+                <p class="product-condition">NEW</p>
+                <p class="product-mileage">-</p>
+                <p class="product-price">$1200</p>
                 <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
@@ -132,10 +132,10 @@
         <div class="brand-product">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
+                <h1 class="product-name">HARLEY</h1>
+                <p class="product-condition">USED</p>
+                <p class="product-mileage">52</p>
+                <p class="product-price">$500</p>
                 <button class="add-cart" style="color:white">Buy</button>
             </div>
         </div>
