@@ -49,9 +49,9 @@
           
             <nav class="navbar">
              
-            <a href="#" class="active">Home</a>
+            <a href="home.php" class="active">Home</a>
         
-            <a href="#">catalogue</a>
+            <a href="catalogue.php">catalogue</a>
             <a href="#">Contact</a>
             
            
@@ -87,7 +87,7 @@
     ?>
     
     <div id="prod_section" class="row text-start align-items-center gy-5 my-5">
-    <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
+    <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000" id="target_bmw"></div>
     <div class="col-12 col-md-6">
         <div>
             <h2 class="display-4">BMW</h2>
@@ -118,7 +118,7 @@ for ($x = 0; $x < 2; $x++) { ?>
     <?php } ?>
     </div>
 <?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
+    <div class="row text-start align-items-center gy-5 my-5" id="target_harley">
         <div class="col-12 col-md-6">
             <div>
                 <h2 class="display-4">Harley-Davidson</h2>
@@ -153,7 +153,7 @@ for ($x = 0; $x < 2; $x++) { ?>
         </div>
   
 <?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
+    <div class="row text-start align-items-center gy-5 my-5" id="target_honda">
         <div class="col-12 col-md-6"><img src="assets/honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
         <div class="col-12 col-md-6">
             <div>
@@ -188,7 +188,7 @@ for ($x = 0; $x < 2; $x++) { ?>
         </div>
   
 <?php } ?>
-        <div class="row text-start align-items-center gy-5 my-5">
+        <div class="row text-start align-items-center gy-5 my-5" id="target_suzuki">
             <div class="col-12 col-md-6">
                 <div>
                     <h2 class="display-4">SUZUKI</h2>
@@ -222,7 +222,7 @@ for ($x = 0; $x < 2; $x++) { ?>
   
 <?php } ?>
     
-        <div class="row text-start align-items-center gy-5 my-5">
+        <div class="row text-start align-items-center gy-5 my-5" id="target_kawasaki">
             <div class="col-12 col-md-6"><img src="assets/kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
             <div class="col-12 col-md-6">
                 <div>
@@ -257,7 +257,7 @@ for ($x = 0; $x < 2; $x++) { ?>
         </div>
   
 <?php } ?>
-            <div class="row text-start align-items-center gy-5 my-5">
+            <div class="row text-start align-items-center gy-5 my-5" id="target_yamaha">
                 <div class="col-12 col-md-6">
                     <div>
                         <h2 class="display-4">YAMAHA</h2>

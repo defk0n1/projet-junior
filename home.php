@@ -49,7 +49,7 @@
           
             <nav class="navbar">
              
-            <a href="#" class="active">Home</a>
+            <a href="home.php" class="active">Home</a>
         
             <a href="catalogue.php">Catalogue</a>
             <a href="#">Contact</a>
@@ -61,6 +61,7 @@
             </nav>
         
     </header>
+    <button id="scrollToBottomBtn" class="btn btn-danger btn-lg  position-fixed bottom-0 end-0 m-3 rounded-pill">View our catalogue <i class="bi bi-chevron-down"></i></button>
     <div class="content">
         <div class="vid-wrapper">
           <video autoplay loop muted plays-inline class="back-video">
@@ -102,21 +103,21 @@
       
           <div class="row mt-4">
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_bmw" target="_blank">
                       <img src="assets/bmw.png" alt="BMW Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_harley" target="_blank">
                       <img src="assets/harley.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_honda" target="_blank">
                       <img src="assets/honda.png" alt="Honda Logo" class="img-fluid img-logo" id="small-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
@@ -129,25 +130,25 @@
       
           <div class="row mt-4 " id="lastligne">
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_suzuki" target="_blank">
                       <img src="assets/suzuki.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
-                      data-aos-delay="10"
-                      data-aos-duration="500">
+                      data-aos-delay="4"
+                      data-aos-duration="300">
                   </a>
               </div>
               
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_yamaha" target="_blank">
                       <img src="assets/kawasaki.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
-                      data-aos-delay="10"
-                      data-aos-duration="500">
+                      data-aos-delay="4"
+                      data-aos-duration="300">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#target_yamaha" target="_blank">
                       <img src="assets/yamaha.png" alt="Yamaha Logo" class="img-fluid img-logo" data-aos="fade-up"
-                      data-aos-delay="10"
-                      data-aos-duration="500">
+                      data-aos-delay="4"
+                      data-aos-duration="300">
                   </a>
               </div>
           </div>
@@ -238,7 +239,7 @@
           $(document).ready(function () {
               // Show/hide scroll button based on scroll position
               $(window).scroll(function () {
-                if ($(this).scrollTop() < 600) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
+                if ($(this).scrollTop() < 1000000) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
                   $('#scrollToBottomBtn').fadeIn();
                 } else {
                   $('#scrollToBottomBtn').fadeOut();
