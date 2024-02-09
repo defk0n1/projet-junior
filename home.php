@@ -52,7 +52,7 @@
             <a href="home.php" class="active">Home</a>
         
             <a href="catalogue.php">Catalogue</a>
-            <a href="#">Contact</a>
+            <a href="crud_interface.php">Contact</a>
             
            
             
@@ -61,7 +61,6 @@
             </nav>
         
     </header>
-    <button id="scrollToBottomBtn" class="btn btn-danger btn-lg  position-fixed bottom-0 end-0 m-3 rounded-pill">View our catalogue <i class="bi bi-chevron-down"></i></button>
     <div class="content">
         <div class="vid-wrapper">
           <video autoplay loop muted plays-inline class="back-video">
@@ -85,7 +84,8 @@
           </div>
         
           </div>
-                   
+        
+        <div class="background-image"></div>
         </div>
 
         
@@ -93,31 +93,33 @@
             <img src="assets/your-company-image.png" alt="Company Image" class="company-image">
             <div class="company-text">       
               <p>Our company is committed to providing high-quality products/services to our clients. We value innovation, teamwork, and customer satisfaction.</p>
-              <button class="shop-now">BROWSE</button>
+              <a href="home.php#brands_begin">
+                <button class="shop-now" >BROWSE</button>
+                </a>
             </div>
             
           </div>
      
       <div class="container mt-5">
-          <h3 class="display-2 text-center brand-head">Begin Your Journey</h3>
+          <h3 class="display-2 text-center brand-head" id="brands_begin">Begin Your Journey</h3>
       
-          <div class="row mt-4">
+          <div class="row mt-4" >
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_bmw" target="_blank">
+                  <a href="catalogue.php#target_bmw" >
                       <img src="assets/bmw.png" alt="BMW Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_harley" target="_blank">
+                  <a href="catalogue.php#target_harley" >
                       <img src="assets/harley.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_honda" target="_blank">
+                  <a href="catalogue.php#target_honda" >
                       <img src="assets/honda.png" alt="Honda Logo" class="img-fluid img-logo" id="small-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
@@ -130,7 +132,7 @@
       
           <div class="row mt-4 " id="lastligne">
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_suzuki" target="_blank">
+                  <a href="catalogue.php#target_suzuki" >
                       <img src="assets/suzuki.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="4"
                       data-aos-duration="300">
@@ -138,14 +140,14 @@
               </div>
               
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_yamaha" target="_blank">
+                  <a href="catalogue.php#target_yamaha" >
                       <img src="assets/kawasaki.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="4"
                       data-aos-duration="300">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="catalogue.php#target_yamaha" target="_blank">
+                  <a href="catalogue.php#target_yamaha" >
                       <img src="assets/yamaha.png" alt="Yamaha Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="4"
                       data-aos-duration="300">
@@ -234,25 +236,7 @@
               });
           });
       </script>
-      <script>
-          // Wait for the document to be ready
-          $(document).ready(function () {
-              // Show/hide scroll button based on scroll position
-              $(window).scroll(function () {
-                if ($(this).scrollTop() < 1000000) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
-                  $('#scrollToBottomBtn').fadeIn();
-                } else {
-                  $('#scrollToBottomBtn').fadeOut();
-                }
-              });
-            
-              // Smooth scroll to the bottom
-              $('#scrollToBottomBtn').click(function () {
-                $('html, body').animate({ scrollTop: $(document).height() }, 'slow');
-                return false;
-              });
-            });
-        </script>
+      
       
 
 

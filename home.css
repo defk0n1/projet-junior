@@ -29,6 +29,18 @@
 
   
   }
+
+.background-image {
+  background-image: url("assets/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: -101;
+}
 .navbar a{
   font-size: medium;
   color: rgb(255, 255, 255);
@@ -214,7 +226,7 @@ a:hover{
 
 
 .company-section{
-  background-color: whitesmoke;
+  background-color: transparent;
   min-height: 100vh;
   min-width: 100vh;
   margin-top:0px ;
