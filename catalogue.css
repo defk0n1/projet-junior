@@ -13,6 +13,7 @@
     align-items: center;
     justify-content: center;
     width: 100%;
+    border: black;
     
 }
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
@@ -56,7 +57,7 @@
     top: 50%;
     transform: translateY(-50%);
     background: #afafb6;
-  }
+}
 .contentt .left-side .details .text-one,
 .contentt .left-side .details .text-two{
   font-size: 14px;
