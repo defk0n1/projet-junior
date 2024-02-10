@@ -63,7 +63,12 @@
                         <div class="total-price">$0</div>
                     </div>
                     <!-- Buy Button -->
-                    <button type="button" class="btn-buy">Buy Now</button>
+                    <form method="post" action="checkout.php">
+                        <input type="hidden" name="total_price" id="total_price" value="0">
+                        <button type="submit" class="btn-buy">Buy Now</button>
+                    </form>
+
+
                     <!-- Cart Close -->
                     <i class='bx bx-x' id="close-cart"></i>
                 </div>
@@ -305,5 +310,7 @@
 </script>        
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 </body>
 </html>

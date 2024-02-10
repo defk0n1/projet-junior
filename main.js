@@ -100,4 +100,27 @@ function updatetotal() {
     total = total + price ;
     document.getElementsByClassName('total-price')[0].innerHTML = "$"+ total;
     }
+    document.getElementById('total_price').value = total;
+    // Extract the total price from the HTML content
+    console.log(total);
+    // Send the total price to the PHP backend via AJAX
+    /* var xhr = new XMLHttpRequest();
+    xhr.open("POST", "checkout.php", true);
+    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+            // Handle the response from the server if needed
+        }
+    };
+    xhr.send("total_price=" + total); */
+    $.ajax({
+        url: "checkout.php",
+        method: "POST",
+        data: { "total_price": total }
+      })
+
 }
+
+document.querySelector('.btn-buy').addEventListener('click', function(event) {
+    updatetotal(); // Make sure this updates the hidden input value
+});
