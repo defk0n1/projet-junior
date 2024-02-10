@@ -6,7 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $condition = $_POST["condition"];
     $mileage = $_POST["mileage"];
     $price = $_POST["price"];
-    $conn = mysqli_connect("localhost", "root", "","motto"); 
+    $conn = mysqli_connect("localhost", "root", "","moto"); 
     if (!$conn) {
         die("Connection error: " . mysqli_connect_error());
     }
