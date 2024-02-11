@@ -19,6 +19,29 @@
 
 </head>
 <body>
+<?php
+$list=["BMW","Harley-Davidson","Honda","Kawasaki","Suzuki","Yamaha"];
+// Establish database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "moto";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// SQL query to select all rows from the products table
+$sql = "SELECT brand, name, image, motocondition, milage, price FROM moto";
+
+// Execute the query
+$result = mysqli_query($conn, $sql);
+?>
+
+
 <header class="header">
             
             <a href="#" class="logo">catalogue</a>
@@ -92,13 +115,7 @@
         
 
 
-    <?php 
-    $sp="See Products";
-    $pn="Product Name";
-    $c="Condition: XXX";
-    $m="Mileage: XXX";
-    $p="Price: XXX"
-    ?>
+    
     
     <div class="brand">
             <div class = "brand-image"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg" alt="IMAGE"></div>
@@ -111,19 +128,40 @@
     </div>
     
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 6;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">BMW 1000CC</h1>
-                <p class="product-condition">NEW</p>
-                <p class="product-mileage">-</p>
-                <p class="product-price">$1200</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[0]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
     </div>
+    <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
             <div class = "brand-image"><img src="assets/harley.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
@@ -134,20 +172,40 @@
            
     </div>
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">HARLEY</h1>
-                <p class="product-condition">USED</p>
-                <p class="product-mileage">52</p>
-                <p class="product-price">$500</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
-    </div>
     
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[1]){ ?>
+                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                    <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                    <div class="product-desc">
+                        <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                        <p class="product-condition"><?php echo $motocondition; ?></p>
+                        <p class="product-mileage"><?php echo $milage . "Miles"; ?></p>
+                        <p class="product-price">$<?php echo $price; ?></p>
+                        <button class="add-cart" style="color:white">Buy</button>
+                    </div>
+                    </div>
+                    <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
             <div class = "brand-image"><img src="assets/honda1.png" alt="IMAGE"></div>
             <div class="brand-synopsis">
@@ -158,19 +216,40 @@
            
     </div>
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
+    
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[2]){ ?>
+                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                    <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                    <div class="product-desc">
+                        <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                        <p class="product-condition"><?php echo $motocondition; ?></p>
+                        <p class="product-mileage"><?php echo $milage . "Miles"; ?></p>
+                        <p class="product-price">$<?php echo $price; ?></p>
+                        <button class="add-cart" style="color:white">Buy</button>
+                    </div>
+                    </div>
+                    <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
     </div>
+    <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
             <div class = "brand-image"><img src="assets/suzuki.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
@@ -181,19 +260,40 @@
            
     </div>
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[3]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
     </div>
+    <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
             <div class = "brand-image"><img src="assets/kawasaki.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
@@ -204,19 +304,40 @@
            
     </div>
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[4]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
     </div>
+    <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
             <div class = "brand-image"><img src="assets/yamaha.webp" alt="IMAGE"></div>
             <div class="brand-synopsis">
@@ -227,18 +348,38 @@
            
     </div>
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-            <img id="product-img" src="assets/insert.jpg" alt="product" >
-            <div class="product-desc">
-                <h1 class="product-name">PRODUCT NAME</h1>
-                <p class="product-condition">Condition: XXX</p>
-                <p class="product-mileage">Mileage: XXX</p>
-                <p class="product-price">Price: XXX</p>
-                <button class="add-cart" style="color:white">Buy</button>
-            </div>
-        </div>
-    <?php } ?>    
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[5]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
     </div>
 <section id="footer">
         <div class="containerr">
@@ -312,6 +453,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 <script src="main.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<?php
+// Close the database connection
+mysqli_close($conn);
+?>
 </body>
 </html>

@@ -48,7 +48,7 @@ function addCartClicked(event) {
     var condition = shopProducts.getElementsByClassName("product-condition")[0].innerHTML;
     var mileage = shopProducts.getElementsByClassName("product-mileage")[0].innerHTML;
     var price = shopProducts.getElementsByClassName("product-price")[0].innerHTML;
-    var productImg = document.getElementById("product-img").src;
+    var productImg = document.getElementById("product-img").src; 
     console.log(title, price,condition, mileage, productImg);
     addProductToCart(title, price,condition, mileage, productImg);
     updatetotal();
@@ -59,8 +59,10 @@ function addProductToCart(title, price,condition, mileage, productImg) {
     var cartItems = document.getElementsByClassName("cart-content" )[0];
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
     for (var i = 0; i < cartItemsNames.length; i++) {
-        if (cartItemsNames[i].innerText == title){
-        alert("You have already add this item to cart");
+        console.log("Cart item title:", cartItemsNames[i].innerText);
+        console.log("Product title:", title);
+        if (cartItemsNames[i].innerText.trim().toLowerCase() === title.trim().toLowerCase()){
+        alert("You have already added this item to cart");
         return;
         }
     }

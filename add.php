@@ -46,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <select name="brand" id="brand">
             <option value="BMW">BMW</option>
             <option value="Harley-Davidson">Harley-Davidson</option>
-            <option value="HONDA">HONDA</option>
-            <option value="SUZUKI">SUZUKI</option>
-            <option value="KAWASAKI">KAWASAKI</option>
-            <option value="YAMAHA">YAMAHA</option>
+            <option value="Honda">Honda</option>
+            <option value="Suzuki">Suzuki</option>
+            <option value="Kawasaki">Kawasaki</option>
+            <option value="Yamaha">Yamaha</option>
         </select>
         <label for="condition">Condition</label>
         <select name="motocondition" id="condition">
-            <option value="used">Used</option>
+            <option value="Used">Used</option>
             <option value="New">New</option>
         </select>
         <label for="mileage">Product Mileage</label> <br>
