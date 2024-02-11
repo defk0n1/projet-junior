@@ -12,7 +12,7 @@ $result = $conn->query($query);
 $row = $result -> fetch_assoc();
 $count= mysqli_num_rows($result);
 if($count==1){
-  header("Location: test.php");
+  header("Location: success.php");
 }
 else{
   echo '<script>
@@ -46,15 +46,8 @@ else{
                 <input type="password" placeholder="Password" name="pass" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox"> Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
             <button type="submit" name="submit" class="btn">Login</button>
         </form>
-        <div class="register-link">
-            <p>Don't have an account? <a href="#">Register</a></p>
-        </div>
     </div>
 
 </body>

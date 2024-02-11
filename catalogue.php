@@ -109,8 +109,9 @@
             </div>
            
     </div>
+    
     <div class="brand-products" id="products">
-    <?php for ($i = 0;$i< 4;$i++) { ?>
+    <?php for ($i = 0;$i< 6;$i++) { ?>
         <div class="brand-product">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">

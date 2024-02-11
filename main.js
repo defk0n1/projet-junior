@@ -48,7 +48,6 @@ function addCartClicked(event) {
     var condition = shopProducts.getElementsByClassName("product-condition")[0].innerHTML;
     var mileage = shopProducts.getElementsByClassName("product-mileage")[0].innerHTML;
     var price = shopProducts.getElementsByClassName("product-price")[0].innerHTML;
-    /* var productImg = shopProducts.getElementsByClassName("product-img")[0].src; */
     var productImg = document.getElementById("product-img").src;
     console.log(title, price,condition, mileage, productImg);
     addProductToCart(title, price,condition, mileage, productImg);
@@ -94,9 +93,9 @@ function updatetotal() {
     for (var i = 0; i < cartBoxes.length; i++) {
     var cartBox = cartBoxes [i];
     var priceElement = cartBox.getElementsByClassName("cart-product-price")[0];
-    /* var quantityElement = cartBox.getElementsByClassName ("cart-quantity")[0]; */
+    
     var price = parseFloat (priceElement.innerText.replace("$", ""));
-    /* var quantity = quantityElement.value; */
+
     total = total + price ;
     document.getElementsByClassName('total-price')[0].innerHTML = "$"+ total;
     }
@@ -104,15 +103,6 @@ function updatetotal() {
     // Extract the total price from the HTML content
     console.log(total);
     // Send the total price to the PHP backend via AJAX
-    /* var xhr = new XMLHttpRequest();
-    xhr.open("POST", "checkout.php", true);
-    xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    xhr.onreadystatechange = function() {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            // Handle the response from the server if needed
-        }
-    };
-    xhr.send("total_price=" + total); */
     $.ajax({
         url: "checkout.php",
         method: "POST",
