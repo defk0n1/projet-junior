@@ -112,7 +112,7 @@
     
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 6;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">BMW 1000CC</h1>
@@ -135,7 +135,7 @@
     </div>
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">HARLEY</h1>
@@ -159,7 +159,7 @@
     </div>
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
@@ -182,7 +182,7 @@
     </div>
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
@@ -205,7 +205,7 @@
     </div>
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
@@ -228,7 +228,7 @@
     </div>
     <div class="brand-products" id="products">
     <?php for ($i = 0;$i< 4;$i++) { ?>
-        <div class="brand-product">
+        <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
             <img id="product-img" src="assets/insert.jpg" alt="product" >
             <div class="product-desc">
                 <h1 class="product-name">PRODUCT NAME</h1>
