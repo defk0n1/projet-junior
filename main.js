@@ -43,16 +43,23 @@ for (var i = 0; i < addCart.length; i++) {
 // Add To cart
 function addCartClicked(event) {
     var button = event.target;
-    var shopProducts = button.parentElement;
-    var title = shopProducts.getElementsByClassName("product-name")[0].innerHTML;
-    var condition = shopProducts.getElementsByClassName("product-condition")[0].innerHTML;
-    var mileage = shopProducts.getElementsByClassName("product-mileage")[0].innerHTML;
-    var price = shopProducts.getElementsByClassName("product-price")[0].innerHTML;
-    var productImg = document.getElementById("product-img").src; 
-    console.log(title, price,condition, mileage, productImg);
-    addProductToCart(title, price,condition, mileage, productImg);
+    var shopProducts = button.closest('.brand-product');
+    var title = shopProducts.querySelector('.product-name').innerHTML;
+    var condition = shopProducts.querySelector('.product-condition').innerHTML;
+    var mileage = shopProducts.querySelector('.product-mileage').innerHTML;
+    var price = shopProducts.querySelector('.product-price').innerHTML;
+    var productImg = shopProducts.querySelector('.imgurl').value;
+    console.log(productImg);
+    console.log(title, price, condition, mileage, productImg);
+    addProductToCart(title, price, condition, mileage, productImg);
     updatetotal();
+    console.log("Button:", button);
+    console.log("Parent Element:", button.parentElement);
+    var imgurlInput = button.parentElement.querySelector('input[name=imgurl]');
+    console.log("imgurlInput:", imgurlInput);
+
 }
+
 function addProductToCart(title, price,condition, mileage, productImg) {
     var cartShopBox = document.createElement("div");
     cartShopBox.classList.add('cart-box')

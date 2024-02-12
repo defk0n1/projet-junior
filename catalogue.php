@@ -143,7 +143,10 @@ $result = mysqli_query($conn, $sql);
                 
                 if ($brand==$list[0]){ ?>
                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
                         <div class="product-desc">
                             <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
                             <p class="product-condition"><?php echo $motocondition; ?></p>
@@ -172,7 +175,6 @@ $result = mysqli_query($conn, $sql);
            
     </div>
     <div class="brand-products" id="products">
-    
     <?php
         // Check if there are any rows returned
         if (mysqli_num_rows($result) > 0) {
@@ -187,17 +189,21 @@ $result = mysqli_query($conn, $sql);
                 $price = $row['price'];
                 
                 if ($brand==$list[1]){ ?>
-                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                    <img id="product-img" src="<?php echo $image; ?>" alt="product" >
-                    <div class="product-desc">
-                        <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
-                        <p class="product-condition"><?php echo $motocondition; ?></p>
-                        <p class="product-mileage"><?php echo $milage . "Miles"; ?></p>
-                        <p class="product-price">$<?php echo $price; ?></p>
-                        <button class="add-cart" style="color:white">Buy</button>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
                     </div>
-                    </div>
-                    <?php } ?>
+
+                <?php } ?>
                 
             <?php }
         } else {
@@ -216,7 +222,6 @@ $result = mysqli_query($conn, $sql);
            
     </div>
     <div class="brand-products" id="products">
-    
     <?php
         // Check if there are any rows returned
         if (mysqli_num_rows($result) > 0) {
@@ -231,17 +236,21 @@ $result = mysqli_query($conn, $sql);
                 $price = $row['price'];
                 
                 if ($brand==$list[2]){ ?>
-                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                    <img id="product-img" src="<?php echo $image; ?>" alt="product" >
-                    <div class="product-desc">
-                        <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
-                        <p class="product-condition"><?php echo $motocondition; ?></p>
-                        <p class="product-mileage"><?php echo $milage . "Miles"; ?></p>
-                        <p class="product-price">$<?php echo $price; ?></p>
-                        <button class="add-cart" style="color:white">Buy</button>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
                     </div>
-                    </div>
-                    <?php } ?>
+
+                <?php } ?>
                 
             <?php }
         } else {
@@ -275,7 +284,10 @@ $result = mysqli_query($conn, $sql);
                 
                 if ($brand==$list[3]){ ?>
                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
                         <div class="product-desc">
                             <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
                             <p class="product-condition"><?php echo $motocondition; ?></p>
@@ -319,7 +331,10 @@ $result = mysqli_query($conn, $sql);
                 
                 if ($brand==$list[4]){ ?>
                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
                         <div class="product-desc">
                             <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
                             <p class="product-condition"><?php echo $motocondition; ?></p>
@@ -363,7 +378,10 @@ $result = mysqli_query($conn, $sql);
                 
                 if ($brand==$list[5]){ ?>
                     <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
-                        <img id="product-img" src="<?php echo $image; ?>" alt="product" >
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
                         <div class="product-desc">
                             <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
                             <p class="product-condition"><?php echo $motocondition; ?></p>

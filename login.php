@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost", "root", "", "login_db");
+$conn = mysqli_connect("localhost", "root", "", "moto");
 if (!$conn) {
   die("no connection");
 }
@@ -12,7 +12,7 @@ $result = $conn->query($query);
 $row = $result -> fetch_assoc();
 $count= mysqli_num_rows($result);
 if($count==1){
-  header("Location: success.php");
+  header("Location: crud_interface.php");
 }
 else{
   echo '<script>

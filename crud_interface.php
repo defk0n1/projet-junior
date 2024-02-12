@@ -4,10 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Admin Interface</title>
 </head>
 <body>
     <style>
+        .login-link {
+        position: fixed;
+        top: 5px; /* Adjust top position as needed */
+        right: 30px; /* Adjust right position as needed */
+        font-size: 24px; /* Adjust font size as needed */
+        color: #333; /* Adjust color as needed */
+        z-index: 9999; /* Ensure it appears on top of other elements */
+        text-decoration: none; /* Remove default underline */
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -16,7 +27,7 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 50px auto;
             padding: 35px;
             background-color: #fff;
@@ -53,7 +64,9 @@
             background-color: #c9371a;
         }
     </style>
-
+    <a href="login.php" class="login-link">
+        <i class="bx bx-power-off"></i>
+    </a>
     <div class="container">
         <h2>Admin Interface</h2>
         <?php
