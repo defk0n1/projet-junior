@@ -166,7 +166,7 @@ $result = mysqli_query($conn, $sql);
     </div>
     <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
-            <div class = "brand-image"><img src="assets/harley.jpg" alt="IMAGE"></div>
+            <div class = "brand-image"><img src="assets/harleycat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>Harley-Davidson</h1>
                 <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
@@ -260,7 +260,7 @@ $result = mysqli_query($conn, $sql);
     </div>
     <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
-            <div class = "brand-image"><img src="assets/suzuki.jpg" alt="IMAGE"></div>
+            <div class = "brand-image"><img src="assets/suzukicat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>SUZUKI</h1>
                 <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
@@ -307,7 +307,7 @@ $result = mysqli_query($conn, $sql);
     </div>
     <?php mysqli_data_seek($result, 0); ?>
     <div class="brand">
-            <div class = "brand-image"><img src="assets/kawasaki.jpg" alt="IMAGE"></div>
+            <div class = "brand-image"><img src="assets/kawasakicat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>KAWASAKI</h1>
                 <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>

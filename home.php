@@ -16,10 +16,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,200;1,400;1,500;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">  
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
     <style><?php include 'home.css' ; ?> </style>
 </head>
 <body>
-<header class="header">
+<!-- <header class="header">
             
             <a href="#" class="logo">PLACEHOLDER</a>
             <div>
@@ -58,7 +59,7 @@
             
             
             
-            </nav>
+            </nav> -->
         
     </header>
     <div class="content">
@@ -66,18 +67,24 @@
           <video autoplay loop muted plays-inline class="back-video">
                 <source src="assets/video.mp4" type="video/mp4">
           </video>
-          <!-- <div class="nav-wrapper">
-            <div class="nav-logo">
-            </div>
+          <div class="nav-wrapper">
+            
             <div class="nav-list">
+            <a href="#" onclick="return false" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="nav-logo"><img src="logo1.png" alt="Logo"></div>
                 <div class="nav-elt"><a href="#" class="link">HOME</a></div>
                 <div class="nav-elt"><a href="#" class="link">ABOUT</a></div>
-                <div class="nav-elt"><a href="#" class="link">BROWSE</a></div>
-                <div class="nav-elt"><a href="#" class="link">CONTACT</a></div>
+                <div class="nav-elt"><a href="catalogue.php" class="link">BROWSE</a></div>
+                <i class='bx bxs-lock-alt nav-elt lock' style="color:red"></i>
+              
 
             </div>
-        </div> -->
-            <div class="logo"><img src="assets/logo.png" alt="Logo"></div>
+        </div>
+            <!-- <div class="logo"><img src="assets/logo.png" alt="Logo"></div> -->
           <div class="promo-text"><h1>REV UP YOUR RIDE</h1>
                 <h2>Discover the thrill of the open road with our exclusive selection of <strong>top-notch motorbikes.</strong>
                   we have everything you need to fuel your passion for adventure</h2>  
@@ -88,12 +95,57 @@
         </div>
 
         
-          <div class="company-section">
-            <img src="assets/your-company-image.png" alt="Company Image" class="company-image">
-            <div class="company-text">       
-              <p>Our company is committed to providing high-quality products/services to our clients. We value innovation, teamwork, and customer satisfaction.</p>
-              <button class="shop-now">BROWSE</button>
-            </div>
+          
+            <section class="chooseus-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="section-title">
+            <span>WHY CHOOSE US?</span>
+            <h2>PUSH THE LIMITS</h2>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-3 col-sm-6 ">
+          <div class="cs-item">
+          <i class='bx bxs-check-circle cs-icon'></i>
+            <h4>Quality Assurance</h4>
+            <p>
+            Our motorbikes undergo rigorous testing and adhere to the highest quality standards, ensuring top-tier performance and durability and guaranteeing reliability.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 ">
+          <div class="cs-item">
+            <i class='bx bxs-category-alt cs-icon'></i>
+            <h4>Diverse Selection</h4>
+            <p>
+            From sport bikes to cruisers and off-road models, our inventory caters to all riding styles and preferences. We offer iconic brands known for innovation, style, and versatility, ensuring options for riders of all skill levels.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 ">
+          <div class="cs-item">
+            <i class='bx bx-support cs-icon'></i>
+            <h4>Customer Service</h4>
+            <p>
+            We prioritize customer satisfaction with responsive support channels and transparent communication. Our comprehensive warranty policies and hassle-free returns demonstrate our commitment to your peace of mind.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-3 col-sm-6 ">
+          <div class="cs-item">
+          <i class='bx bxs-badge-dollar cs-icon'></i>
+            <h4>Competitive Pricing </h4>
+            <p>
+            Enjoy unbeatable value with our competitive pricing and value-added services. We offer flexible financing options and exclusive promotions on accessories and maintenance services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
             
           </div>
      
@@ -110,7 +162,7 @@
               </div>
               <div class="col-lg-4 col-md-6 text-center">
                   <a href="#" target="_blank">
-                      <img src="assets/harley.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
+                      <img src="assets/harleylogo.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
@@ -130,7 +182,7 @@
           <div class="row mt-4 " id="lastligne">
               <div class="col-lg-4 col-md-6 text-center">
                   <a href="#" target="_blank">
-                      <img src="assets/suzuki.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
+                      <img src="assets/suzukilogo.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
@@ -138,7 +190,7 @@
               
               <div class="col-lg-4 col-md-6 text-center">
                   <a href="#" target="_blank">
-                      <img src="assets/kawasaki.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
+                      <img src="assets/kawasakilogo.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
@@ -217,22 +269,8 @@
       <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-      <script>
-          AOS.init();
-          const aosElements = document.querySelectorAll('[data-aos]');
-          
-          aosElements.forEach(element => {
-              element.addEventListener('mouseenter', () => {
-                  element.setAttribute('data-aos', 'false'); // Change to the desired AOS animation type
-                  AOS.refresh(); // Refresh AOS to apply the new animation
-              });
-      
-              element.addEventListener('mouseleave', () => {
-                  element.setAttribute('data-aos', 'fade-up'); // Disable AOS on hover out
-                  AOS.refresh();
-              });
-          });
-      </script>
+      <script src="home.js"></script>
+      <script src="home_nav.js"></script>
       <script>
           // Wait for the document to be ready
           $(document).ready(function () {

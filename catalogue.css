@@ -1,46 +1,175 @@
-*{
-    margin: 0;
-    padding:0;
-    scroll-behavior: smooth;
-    list-style: none;
+html{
+    overflow-x: hidden; 
+    width:100vw;
+}
+.nav-wrapper{
+    width: 100%;
+    background-color:transparent;
+    padding: 0;
+    position: relative;
+  
+  
+  }
 
+  .toggle-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
 
-
-
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: rgb(255, 0, 0);
+    border-radius: 10px;
 }
 
 
-
-.header{  position: fixed;
-    top: 0;
-    left:0;
-    width: 100%;
-    padding: 20px 10%;
-    background-color:transparent;
+   .nav-list
+   {
+    height: 13vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap:10%;
+    width: 100%;
+    position: fixed;
+    /* padding-top: 35px;
+    padding-bottom: 50px; */
+    transition: background-color ease-in 0.5s;
+    background-color:#ffffff00 ;
+    text-decoration: solid;
     z-index: 100;
-   
+    
+    
+  
+    
+  
+   }
+  
+  
+   .nav-list:hover{
+    background-color: rgb(0, 0, 0);
+    
+  
+   }
+  
+   .scrolled{
+    background-color: #ffffff;
+    /* border-bottom: solid 1px rgb(0, 0, 0); */
+  
+  
+   }
+   .nav-elt{
+    padding-top: 4.5vh;
+   }
+  
+   .nav-elt a{
+    text-align: center;
+    height: 100%;
+    min-width: 30%;
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Roboto Condensed', sans-serif;
+    
+  
+  
+    
+   }
+  
+   .nav-elt a:hover{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    
+    
+   }
+   .nav-logo img{
+    height: 92%;
+    width: 100px;
+    margin-top:1vh;
+    
+   }
+
+   @media (max-width: 800px) {
+    .nav-logo img{
+        height: 92%;
+        width: 8vw;
+        position: absolute;
+        top: 0.1rem;
+        left: 1rem;
+        height: 3rem;
+            
+       }
+    .nav-list:hover{
+        background-color: rgba(0, 0, 0, 0);
+        
+       }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-elt a {
+        display: none;
+        width: 100%;
+        padding: .5rem 1rem;
+    }
+    
+    
+
+    .nav-list{
+        width: 100%; 
+        flex-direction: column;
+        gap:0;
+        height: auto;
+        transition: none;
+        
+
+    }
+
+    .nav-elt{
+        text-align: center;
+        width: 100%;
+        padding-top: 5px;
+
+    }
+    
 
 
     
+
+    .nav-elt :has(> .active) , .nav-list:has(> .active) {
+        display: flex;
+        background-color: whitesmoke;
+        text-align: center;
+        color: red;
+
     }
-.navbar a{
-    font-size: medium;
-    color: rgb(255, 255, 255);
-    text-decoration:dotted;
-    font-weight: 500;
-    margin-left: 35px;
-}
-.logo{
-    font-size: 30px;
-    color: rgb(255, 255, 255);
-    text-decoration: dotted;
-    font-weight: 700;
+    
+    .scrolled{
+        background-color: rgb(0, 0, 0,0);
+        
+    }
 
+    .active.nav-logo{
+        display: none;
+        
+    }
+    a.active{
+        display: flex;
+    }
+    a.active:hover{
+        color:black;
+    }
 }
-
+  
+  
 
  a:hover{
     color: #e40505;
@@ -51,7 +180,6 @@
  
 
 .main-home{
-
     height: 100vh;
     width: auto;
     background-image: url('assets/cataloguecover.png');
@@ -320,4 +448,76 @@
     }
 }
   
+@media only screen and (max-width: 600px){
+    
+
+ section{
+    padding: 5% 10%;
+ }
+ 
+
+.main-home{
+    max-height: 60vh;
+    width: auto;
+    background-image: url('assets/cataloguecover.png');
+    background-position: center;
+    background-position-y: 0%;
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+
+}
+.main-text h5{
+    color:rgb(127, 2, 2);
+    font-size: 32px;
+    text-transform: capitalize;
+    font-weight: 500;
+
+}
+.main-text h1{
+    color: black;
+    font-size: 6vw;
+    text-transform:capitalize;
+    line-height: 1.1;
+    font-weight: 600;
+    margin: 6px 0 10px;
+}
+.main-text p{
+    color: #333c56;
+    font-size: 20px;
+    font-style: italic;
+    margin-bottom: 20px;
+}
+.main-btn{
+    display: inline-block;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border: 2px solid #111;
+    padding: 12px 25px;
+    transition: all .42s ease;
+}
+.main-btn :hover{
+    background-color: #000;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
   

@@ -1,38 +1,16 @@
-/* html, body {
-  width: 100%;
-  height:100%;
-}
- */
- @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
- body{
+body{
     margin: 0;
     padding: 0;   
+    -webkit-font-smoothing: antialiased;
+
 }
 html{
-    width: 100%;
-    scroll-behavior: smooth;   
+    
+    scroll-behavior: smooth; 
+    overflow-x: hidden;  
 } 
-#prod_section {
-   
-    background: rgb(193,182,182);
-    background: linear-gradient(90deg, rgba(193,182,182,1) 0%, rgba(212,141,99,1) 35%, rgba(183,18,52,1) 100%);
 
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
 
-}
-
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}
 /* Cart */
 .cart{
     position:fixed;
@@ -40,15 +18,15 @@ html{
     right: -100%;
     width: 400px;
     min-height: 100vh;
-    padding: 20px;
+    margin: 5px;
     background: #fff;
     box-shadow: -2px 0 4px hsl(0 4% 15% / 10%);
     transition: 0.3s;
-    max-height: 300px; /* Adjust the height as needed */
-    overflow-y: auto; /* Enables vertical scrolling */
+    z-index: 1000;
 }
 .cart.active{
     right: 0;
+    margin: 0;
 }
 .cart-title{
     text-align: center;
@@ -57,7 +35,6 @@ html{
     margin-top: 0.5rem;
     margin-bottom: 1.5rem;
 }
-
 .cart-box {
     display: grid;
     grid-template-columns: 32% 20% 10%;
@@ -121,9 +98,33 @@ html{
     color: black;
     cursor: pointer;
 }
+
+
+#cart-icon{
+    color:red;
+}
+
+@media (max-width: 800px) {
+    i.nav-elt {
+        position: absolute;
+        top: 2.5rem;
+        right: 1.4rem;
+        width:auto;
+      
+        
+      }
+
+
+}
+/* Cart */
+
+
+
+
 .brand{
     max-height:100vh ;
 }
+
 .brand-synopsis{
     margin-bottom: 18%;
     text-align: left;
@@ -131,8 +132,9 @@ html{
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    margin-left: 10%;
+    margin-left: 5%;
     margin-top: 13%;
+    margin-right: 2%;
 }
 .brand-synopsis h1 {
     font-size: 4vw;
@@ -143,11 +145,11 @@ html{
 }
 
 .brand-synopsis p{
-    font-size: 2vw;
+    font-size: 1.5vw;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
     color: rgb(100, 100, 100);
-    margin-top: 2%;
+    /* margin-top: 2%; */
 
 }
 .brand{
@@ -161,7 +163,7 @@ html{
 .brand-image img{
     height:inherit;
     width: inherit;
-    margin-left: 10%;
+    margin-left: 5%;
     filter: drop-shadow(10px 10px );
 }
 .brand-image{
@@ -202,9 +204,7 @@ html{
     padding: 5%;
     background-color: rgb(211, 210, 210);
     background-size:cover;
-} 
-
-
+}
 .brand-product{
     width: 100%;
     height: 70vh;
@@ -222,25 +222,6 @@ html{
     backdrop-filter: blur(30px);
 }
 
-@media only screen and (max-width: 600px){
-    .brand-products { 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap:5%;
-        
-    }
-    .brand-product h1{
-        font-size: 5vw;
-    }
-    .brand-product p{
-        font-size: 4vw;
-    }
-    
-}
-
-
 
 .brand-product h1{
     font-size: 2.5vw;
@@ -248,8 +229,6 @@ html{
 .brand-product p{
     font-size: 1.25vw;
 }
-
-
 .brand-product img {
     width:50%;
     height:40%;
@@ -268,38 +247,109 @@ html{
     margin-top: 5%;
     margin-bottom: 10%;
   }
-.sc-container{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-family: "Poppins",sans-serif;
+
+
+@media only screen and (max-width:1000px ) and (min-width:600px){
+    .brand-product{
+        height: 40vh;
+    }
+    #product-image{
+        height: 50%;
+        width: 40%;
+    }
+
+
 }
-.sc-container img{
-    width: 200px;
+
+@media only screen and (max-width: 600px){
+    .brand-products { 
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 3rem;
+        
+        
+    }
+    .brand-product h1{
+        font-size: 8vw;
+    }
+    .brand-product p{
+        font-size: 3vw;
+    }
+    .brand-synopsis{
+        margin-bottom: 5%;
+        text-align: left;
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-left: 0;
+        margin-top: 5%;
+        margin-right: 5%;
+    }
+    .brand-synopsis h1 {
+        font-size: 4vw;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 400;
+        margin-bottom: 0;
+        color: red;
+    }
     
+    .brand-synopsis p{
+        font-size: 2vw;
+        font-weight: 300;
+        font-family: 'Roboto', sans-serif;
+        color: rgb(100, 100, 100);
+        /* margin-top: 2%; */
+    
+    }
+    .brand{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        min-height: 38.28vw;
+        background-color: white;
+       
+    }
+    .brand-product{
+        width:50%;
+        height:30%;
+        margin-top: 10%;
+    
+    }
+    
+    .brand-product button{
+        box-shadow: 0px 1px 3px #b0b0b0;
+        font-family: 'Roboto'sans-serif;
+        color: #ff0000;
+        font-size: 2vw;
+        background: #ff0000;
+        padding: 0.5vw 1vw;   
+        text-decoration: none;
+        border: none;
+        margin-top: 5%;
+        margin-bottom: 10%;
+      }
+      .brand-image img{
+        height:inherit;
+        width: inherit;
+        margin-left: 10%;
+        filter: drop-shadow(10px 10px );
+    }
+    .brand-image{
+        width:70%;
+        height:100%;
+        margin-top: 5%;
+    }
 }
-.sc-container h1 {
-    font-size: 2.8rem;
-    margin-bottom: 10px;
-    margin-top: 0;
-}
-.sc-container p{
-    max-width: 600px;
-    font-size: 0.97rem;
-    text-align: center;
-    margin: 0.5rem 0;
-}
-.sc-btn{
-    padding: 12px 20px;
-    border-radius: 2rem;
-    background-color: black;
-    color: #ffffff;
-    font-size: 1rem;
-    font-weight: 500;
-}
+
+
+
+  
+  
+ 
 
 
 
