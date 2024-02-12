@@ -9,6 +9,13 @@
 </head>
 <body>
     <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
         .login-link {
         position: fixed;
         top: 5px; /* Adjust top position as needed */
@@ -17,13 +24,6 @@
         color: #333; /* Adjust color as needed */
         z-index: 9999; /* Ensure it appears on top of other elements */
         text-decoration: none; /* Remove default underline */
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
         }
 
         .container {
