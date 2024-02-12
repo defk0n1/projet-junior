@@ -264,36 +264,38 @@ html{
     width: 100%;
     
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 .containerr{
     width: 60%;
     background: #dcdada;
-    height: 330px;
+    height: auto;
     border-radius: 6px;
-    padding: 10px 40px 20px 30px;
+    padding: 5px 5px 5px 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: -120px;
+    
 }
+
 .containerr .contentt{
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: space-between;
 }
 .containerr .contentt .left-side{
-    width: 25%;
+    width: 35%;
     height: 80%;   
 }
 .contentt .left-side .details{
-    margin: 14px;
+    margin: 20px;
     text-align: center;
 }
 .contentt .left-side .details i{
-    font-size: 30px;
+    font-size: 20px;
     color: #ec6868;
     margin-bottom: 10px;
 }
 .contentt .left-side .details .topic{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
 }
 .contentt .left-side::before{
@@ -312,7 +314,7 @@ html{
   color: #6d6d72;
 }
 .containerr .content .right-side {
-    width: 75%;
+    width: 65%;
     height: 100%; 
     margin-left: 75px;  
 }
@@ -349,14 +351,14 @@ html{
     background-color: #bec4f7;
 }
 .last {
-    padding:5px 0;
+    
     color:#ffffff;
     position:absolute;
     bottom: 0px;
-    min-height: 60px;
+    min-height: 10%;
     width: 100%;
     background: #EC3C2C    ;
-    padding: 20px 50px;
+    padding: 0 0 5px 0;
     
 }
 .last .social{
@@ -520,4 +522,58 @@ html{
 
 }
 
+  
+@media only screen and (max-width: 1100px) {
+    .containerr {
+        width: 80%; 
+        transition: width 0.3s ease;
+    }
+    .contentt .left-side {
+        width: 35%; 
+    }
+    .contentt .right-side {
+        width: 65%; 
+    } 
+    }
+
+
+@media only screen and (max-width: 900px) {
+    .containerr {
+        width: 90%;
+        transition: width 0.3s ease;
+    }
+    .containerr .contentt .left-side::before {
+        display: none; 
+    }
+    .contentt .left-side .details,
+    .contentt .right-side .par11 {
+        font-size: 16px; 
+    }
+    .contentt .right-side .topic-text {
+        font-size: 20px; 
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .containerr {
+        width: 100%;
+        transition: width 0.3s ease;
+    }
+    .containerr .contentt .left-side,
+    .containerr .contentt .right-side { 
+        margin-left: 0; 
+    }
+    .right-side .input-box input,
+    .right-side .button input[type="button"] {
+        width: 100%; 
+    }
+    .contentt .left-side .details,
+    .contentt .right-side .par11 {
+        font-size: 14px; 
+    }
+    .contentt .right-side .topic-text {
+        font-size: 18px; 
+    }
+}
+  
   

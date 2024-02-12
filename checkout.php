@@ -15,8 +15,8 @@ $stripe_secret_key = "sk_test_51OiJmBBekC1GqsqDhiCNI47RWZDNlLOY3Q6I1RVRizCtmG9nr
 
 $checkout_session = \Stripe\Checkout\Session::create([
     "mode" => "payment",
-    "success_url" => "http://localhost/php/AHMED2/projet-junior/success.php",
-    "cancel_url" => "http://localhost/php/AHMED2/projet-junior/cancel.php",
+    "success_url" => "http://localhost/php/projet_junior1/success.php",
+    "cancel_url" => "http://localhost/php/projet_junior1/cancel.php",
     "line_items" => [
         [
             "quantity" => 1,

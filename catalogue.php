@@ -9,11 +9,21 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="catalogue.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <style> <?php include 'catalogue.css'; ?> </style>
+    <style> <?php include 'main.css'; ?> </style>
+    <title>Catalogue</title>
+
     <style> <?php include 'main.css'; ?> </style>
     <title>Catalogue</title>
 
@@ -385,7 +395,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="left-side">
                     <div class="address details">
                         <i class="fas fa-map-marker-alt"></i>
-                        <div class="topic">address</div>
+                        <div class="topic">Address</div>
                         <div class="text-one">3500 Deer Creek Road
                             Palo Alto,</div> 
                         <div class="text-one">CA 94304</div>    
@@ -393,25 +403,29 @@ $result = mysqli_query($conn, $sql);
                     </div>
                     <div class="phone details">
                         <i class="fas fa-phone-alt"></i>
-                        <div class="topic">phone number</div>
+                        <div class="topic">Phone Number</div>
                         <div class="text-one">+216 95 904 180 </div>
                     </div>
                     <div class="email details">
                         <i class="fas fa-envelope"></i>
-                        <div class="topic">email</div>
-                        <div class="text-one">NightRiders@gmail.tn </div>
+                        <div class="topic">Email</div>
+                        
+                        <div class="text-one">NightRiders@gmail.com </div>
                     </div>
                     
                 </div>
                 <div class="right-side">
                     
-                    <p class="par11">Your privacy is a priority for us. Discover how we handle your information responsibly by reviewing our Privacy Policy. We are committed to transparency and safeguarding your data throughout your interaction with our services.</p>
+                    
                     <p class="par11"> <strong>Privacy Policy</strong></p>
+                    <p class="par11">Your privacy is a priority for us. Discover how we handle your information responsibly by reviewing our Privacy Policy. We are committed to transparency and safeguarding your data throughout your interaction with our services.</p>
+                    
                     
                     
                     
                     <div class="topic-text">Join Our Newsletter Now </div>
                     <p class="par11">Enjoy our newsletter to stay updated with the latest news and special sales. Lets your email address here!</p>
+                    
                     <form action="#" >
                     
                         <div class="input-box">
@@ -419,7 +433,7 @@ $result = mysqli_query($conn, $sql);
                         </div>
                     
                         <div class="button">
-                            <input type="button" value="Sent Now">
+                            <input type="button" value="Send Now">
                         </div>
                     </form>
                 </div>
@@ -436,6 +450,7 @@ $result = mysqli_query($conn, $sql);
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-linkedin"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
             
             <p class="copyright">NightRiders© 2024</p>   
+              
         </div>
     </section>
     <style>
