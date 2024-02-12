@@ -53,9 +53,10 @@
 .main-home{
 
     height: 100vh;
-    width: 200vh;
-    background-image: url('https://www.freenduro.com/images/stories/wallpaper/wall-2021/fond-ecran-FREENDURO-2021-14.jpg');
+    width: auto;
+    background-image: url('assets/cataloguecover.png');
     background-position: center;
+    background-position-y: 0%;
     background-size: cover;
     display: grid;
     grid-template-columns: repeat(1,1fr);

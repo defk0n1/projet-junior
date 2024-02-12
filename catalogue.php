@@ -19,6 +19,29 @@
 
 </head>
 <body>
+<?php
+$list=["BMW","Harley-Davidson","Honda","Kawasaki","Suzuki","Yamaha"];
+// Establish database connection
+$servername = "localhost";
+$username = "root";
+$password = "";
+$database = "moto";
+
+$conn = mysqli_connect($servername, $username, $password, $database);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// SQL query to select all rows from the products table
+$sql = "SELECT brand, name, image, motocondition, milage, price FROM moto";
+
+// Execute the query
+$result = mysqli_query($conn, $sql);
+?>
+
+
 <header class="header">
             
             <a href="#" class="logo">catalogue</a>
@@ -43,21 +66,35 @@
                 if(a=='motos'){
                   window.open("/index.html");
                 }
-
               }
             </script>
-          
             <nav class="navbar">
-             
-            <a href="#" class="active">Home</a>
-        
-            <a href="#">catalogue</a>
-            <a href="#">Contact</a>
-            
-           
-            
-            
-            
+                <a href="#" class="active">Home</a>
+                <a href="#">Catalogue</a>
+                <a href="#">Contact</a>
+                <i class='bx bx-shopping-bag' id="cart-icon" ></i>
+                <!-- Cart -->
+                <div class="cart">
+                    <h2 class="cart-title">Your Cart</h2>
+                    <!-- Content -->
+                    <div class="cart-content">
+                        
+                    </div>
+                    <!-- Total -->
+                    <div class="total">
+                        <div class="total-title">Total</div>
+                        <div class="total-price">$0</div>
+                    </div>
+                    <!-- Buy Button -->
+                    <form method="post" action="checkout.php">
+                        <input type="hidden" name="total_price" id="total_price" value="0">
+                        <button type="submit" class="btn-buy">Buy Now</button>
+                    </form>
+
+
+                    <!-- Cart Close -->
+                    <i class='bx bx-x' id="close-cart"></i>
+                </div>
             </nav>
         
     </header> 
@@ -66,8 +103,8 @@
             <div class="main-text">
                 
                 <div><h5 class="letter">MOTOS COLLECTION</h5></div>
-                <div> <h1 class="word">NOUVELLE <br> COLLECTION <br>A DECOUVRIR</h1></div>
-                <div><p >N'HESITER PAS </p></div>
+                <div> <h1 class="word">NEW <br> COLLECTION <br>TO DISCOVER</h1></div>
+                <div><p >DO NOT HESITATE </p></div>
                 
                 <a href="#" class="main-btn">SHOP NOW<i class='bx bx-right-arrow-alt'></i></a>
                
@@ -78,222 +115,290 @@
         
 
 
-    <?php 
-    $sp="See Products";
-    $pn="Product Name";
-    $c="Condition: XXX";
-    $m="Mileage: XXX";
-    $p="Price: XXX"
-    ?>
     
-    <div id="prod_section" class="row text-start align-items-center gy-5 my-5">
-    <div class="col-12 col-md-6"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg"class="w-100 h-100 slide-image  " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-    <div class="col-12 col-md-6">
-        <div>
-            <h2 class="display-4">BMW</h2>
-            <p>BMW Motorrad, the motorcycle division of BMW, is renowned for blending performance, technology, and luxury. Offering a diverse lineup, from sport bikes to adventure models, BMW motorcycles are known for innovative engineering and distinctive design.</p>
-        </div>
+    
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>BMW</h1>
+                <p>BMW Motorrad, the motorcycle division of BMW, is renowned for blending performance, technology, and luxury. Offering a diverse lineup, from sport bikes to adventure models, BMW motorcycles are known for innovative engineering and distinctive design.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
     </div>
-    <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-    <?php  
-for ($x = 0; $x < 2; $x++) { ?>
     
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body" id="<?php $i ?>">
-                    <p class="card-text fw-bold">
-                    <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-    </div>
-<?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6">
-            <div>
-                <h2 class="display-4">Harley-Davidson</h2>
-                <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
-            </div>
-        </div>
-        <div class="col-12 col-md-6"><img src="assets/harley.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
-    </div>
-    <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-    <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-    <div class="row text-start align-items-center gy-5 my-5">
-        <div class="col-12 col-md-6"><img src="assets/honda.png"class="w-100 h-100 slide-image" alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-        <div class="col-12 col-md-6">
-            <div>
-                <h2 class="display-4">HONDA</h2>
-                <p>Honda Motor Company, renowned for engineering excellence, offers a wide range of motorcycles. From commuter-friendly scooters to high-performance sport bikes and touring motorcycles, Honda caters to diverse rider preferences.</p>
-            </div>
-        </div>
-        </div>
-        <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-        <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-        <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6">
-                <div>
-                    <h2 class="display-4">SUZUKI</h2>
-                    <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
-                </div>
-            </div>
-            <div class="col-12 col-md-6"><img src="assets/suzuki.jpg" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
-        </div>
-        <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-        <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-    
-        <div class="row text-start align-items-center gy-5 my-5">
-            <div class="col-12 col-md-6"><img src="assets/kawasaki.jpg"class="w-100 h-100 slide-image " alt="" data-aos="fade-right" data-aos-duration="2000"></div>
-            <div class="col-12 col-md-6">
-                <div>
-                    <h2 class="display-4">KAWASAKI</h2>
-                    <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>
-                </div>
-            </div>
-            </div>
-            <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-            <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-  
-<?php } ?>
-            <div class="row text-start align-items-center gy-5 my-5">
-                <div class="col-12 col-md-6">
-                    <div>
-                        <h2 class="display-4">YAMAHA</h2>
-                        <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6"><img src="assets/yamaha.webp" class="w-100 h-100 slide-image " alt="" data-aos="fade-left" data-aos-duration="2000"></div>
-            </div>
-            <h2 class="class display-6 py-5 text-center"><?php echo($sp) ?></h2>
-            <?php  
-for ($x = 0; $x < 2; $x++) { ?>
-    
-    
-	<div class="d-flex justify-content-evenly align-items-center flex-lg-row my-5" id="new">
-    <?php for ($i = 0;$i< 3;$i++) { ?>
-            <div class="card m-2">
-                <a href="">
-                    <img src="assets/insert.jpg" class="card-img-top" height="300" alt="Product">
-                </a>
-                <div class="card-body">
-                    <p class="card-text fw-bold">
-                        <?php echo($pn) ?>
-                    </p>
-                    <small class="text-secondary"><?php echo($c) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($m) ?></small>
-                    <br>
-                    <small class="text-secondary"><?php echo($p) ?></small>
-                </div>
-            </div>
-    <?php } ?>
-        </div>
-        
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[0]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
 
-  
-<?php } ?>
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/harley.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>Harley-Davidson</h1>
+                <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[1]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/honda1.png" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>HONDA</h1>
+                <p>Honda Motor Company, renowned for engineering excellence, offers a wide range of motorcycles. From commuter-friendly scooters to high-performance sport bikes and touring motorcycles, Honda caters to diverse rider preferences.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[2]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/suzuki.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>SUZUKI</h1>
+                <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[3]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/kawasaki.jpg" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>KAWASAKI</h1>
+                <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[4]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
+    <?php mysqli_data_seek($result, 0); ?>
+    <div class="brand">
+            <div class = "brand-image"><img src="assets/yamaha.webp" alt="IMAGE"></div>
+            <div class="brand-synopsis">
+                <h1>YAMAHA</h1>
+                <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
+                <button class="browseproducts"><a href="#products">BROWSE</a></button>
+            </div>
+           
+    </div>
+    <div class="brand-products" id="products">
+    <?php
+        // Check if there are any rows returned
+        if (mysqli_num_rows($result) > 0) {
+            // Loop through each row
+            while ($row = mysqli_fetch_assoc($result)) {
+                // Fetch values of each column and store them in separate variables
+                $brand = $row['brand'];
+                $name = $row['name'];
+                $image = $row['image'];
+                $motocondition = $row['motocondition'];
+                $milage = $row['milage'];
+                $price = $row['price'];
+                
+                if ($brand==$list[5]){ ?>
+                    <div class="brand-product"  data-aos="fade-down" data-aos-duration="3000">
+                        <!-- <img id="product-img" src="<?php echo $image; ?>" alt="product" > -->
+                        <img class="product-img" src="<?php echo $image; ?>" alt="product">
+                        <input type="hidden" class="imgurl" name="imgurl" value="<?php echo $image; ?>">
+
+                        <div class="product-desc">
+                            <h1 class="product-name"><?php echo $brand . " " . $name; ?></h1>
+                            <p class="product-condition"><?php echo $motocondition; ?></p>
+                            <p class="product-mileage"><?php echo $milage . " Miles"; ?></p>
+                            <p class="product-price">$<?php echo $price; ?></p>
+                            <button class="add-cart" style="color:white">Buy</button>
+                        </div>
+                    </div>
+
+                <?php } ?>
+                
+            <?php }
+        } else {
+            echo "No results found";
+        }
+        ?>
+    </div>
 <section id="footer">
         <div class="containerr">
             <div class="contentt">  
@@ -362,8 +467,13 @@ for ($x = 0; $x < 2; $x++) { ?>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
   AOS.init();
-</script>
-        
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</script>        
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="main.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<?php
+// Close the database connection
+mysqli_close($conn);
+?>
 </body>
 </html>
