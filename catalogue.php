@@ -379,7 +379,7 @@ $result = mysqli_query($conn, $sql);
         }
         ?>
     </div>
-<section id="footer">
+    <section id="footer">
         <div class="containerr">
             <div class="contentt">  
                 <div class="left-side">
@@ -399,19 +399,19 @@ $result = mysqli_query($conn, $sql);
                     <div class="email details">
                         <i class="fas fa-envelope"></i>
                         <div class="topic">email</div>
-                        <div class="text-one">@gmail.tn </div>
+                        <div class="text-one">NightRiders@gmail.tn </div>
                     </div>
                     
                 </div>
                 <div class="right-side">
                     
-                    <p>Your privacy is a priority for us. Discover how we handle your information responsibly by reviewing our Privacy Policy. We are committed to transparency and safeguarding your data throughout your interaction with our services.</p>
-                    <p id="#"> <strong>Privacy Policy</strong></p>
-                    <br>
+                    <p class="par11">Your privacy is a priority for us. Discover how we handle your information responsibly by reviewing our Privacy Policy. We are committed to transparency and safeguarding your data throughout your interaction with our services.</p>
+                    <p class="par11"> <strong>Privacy Policy</strong></p>
+                    
                     
                     
                     <div class="topic-text">Join Our Newsletter Now </div>
-                    <p>Enjoy our newsletter to stay updated with the latest news and special sales. Lets your email address here!</p>
+                    <p class="par11">Enjoy our newsletter to stay updated with the latest news and special sales. Lets your email address here!</p>
                     <form action="#" >
                     
                         <div class="input-box">
@@ -435,10 +435,10 @@ $result = mysqli_query($conn, $sql);
             </div>
             <div class="social"><a href="#"><i class="icon ion-social-instagram"></i></a><a href="#"><i class="icon ion-social-linkedin"></i></a><a href="#"><i class="icon ion-social-facebook"></i></a></div>
             
-            <p class="copyright">© 2024</p>   
+            <p class="copyright">NightRiders© 2024</p>   
         </div>
     </section>
-<style>
+    <style>
     .slide-image{
         border-radius: 50px;
         overflow:hidden;
