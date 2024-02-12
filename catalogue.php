@@ -42,37 +42,20 @@ $result = mysqli_query($conn, $sql);
 ?>
 
 
-<header class="header">
-            
-            <a href="#" class="logo">catalogue</a>
-            <div>
-            <input type="search" id="search" value="" onchange="ouvrirpage()" >
-            <a href="#"> <i class='bx bx-search-alt-2'></i></a>
-         
-            <style>
-              #search{
-                width: 200px;
-                   border-radius:30px;
-                    border:1px solid black;
-                      }
-                a{
-                  color: rgb(255, 255, 255);
-                }
-            </style>
-             </div>
-            <script>
-              function ouvrirpage(){
-                var a=document.getElementById("search").value;
-                if(a=='motos'){
-                  window.open("/index.html");
-                }
-              }
-            </script>
-            <nav class="navbar">
-                <a href="#" class="active">Home</a>
-                <a href="#">Catalogue</a>
-                <a href="#">Contact</a>
-                <i class='bx bx-shopping-bag' id="cart-icon" ></i>
+<div class="nav-wrapper">
+            <div class="nav-list">
+                <a href="#" onclick="return false" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a>
+                <div class="nav-logo"><img src="logo1.png" alt="Logo"></div>
+                <div class="nav-elt"><a href="home.php" class="link">HOME</a></div>
+                <div class="nav-elt"><a href="#" class="link">ABOUT</a></div>
+                <div class="nav-elt"><a href="#" class="link">BROWSE</a></div>
+                <i class='bx bx-shopping-bag nav-elt' id="cart-icon"></i>
+            </div> 
+         </div> 
                 <!-- Cart -->
                 <div class="cart">
                     <h2 class="cart-title">Your Cart</h2>
@@ -90,14 +73,11 @@ $result = mysqli_query($conn, $sql);
                         <input type="hidden" name="total_price" id="total_price" value="0">
                         <button type="submit" class="btn-buy">Buy Now</button>
                     </form>
-
-
                     <!-- Cart Close -->
                     <i class='bx bx-x' id="close-cart"></i>
                 </div>
-            </nav>
-        
-    </header> 
+
+            </div>
         
          <section class="main-home">
             <div class="main-text">
@@ -117,7 +97,7 @@ $result = mysqli_query($conn, $sql);
 
     
     
-    <div class="brand">
+    <div class="brand" id="bmwidlink">
             <div class = "brand-image"><img src="assets/P90329061_highRes_bmw-motorrad-suit-pr.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>BMW</h1>
@@ -165,7 +145,7 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
     <?php mysqli_data_seek($result, 0); ?>
-    <div class="brand">
+    <div class="brand" id="harleyidlink">
             <div class = "brand-image"><img src="assets/harleycat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>Harley-Davidson</h1>
@@ -212,7 +192,7 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
     <?php mysqli_data_seek($result, 0); ?>
-    <div class="brand">
+    <div class="brand" id="hondaidlink">
             <div class = "brand-image"><img src="assets/honda1.png" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>HONDA</h1>
@@ -259,7 +239,7 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
     <?php mysqli_data_seek($result, 0); ?>
-    <div class="brand">
+    <div class="brand" id="suzukiidlink">
             <div class = "brand-image"><img src="assets/suzukicat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>SUZUKI</h1>
@@ -306,7 +286,7 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
     <?php mysqli_data_seek($result, 0); ?>
-    <div class="brand">
+    <div class="brand" id="kawasakiidlink">
             <div class = "brand-image"><img src="assets/kawasakicat.jpg" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>KAWASAKI</h1>
@@ -353,7 +333,7 @@ $result = mysqli_query($conn, $sql);
         ?>
     </div>
     <?php mysqli_data_seek($result, 0); ?>
-    <div class="brand">
+    <div class="brand" id="yamahaidlink">
             <div class = "brand-image"><img src="assets/yamaha.webp" alt="IMAGE"></div>
             <div class="brand-synopsis">
                 <h1>YAMAHA</h1>

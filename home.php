@@ -76,10 +76,10 @@
                     <span class="bar"></span>
                 </a>
                 <div class="nav-logo"><img src="logo1.png" alt="Logo"></div>
-                <div class="nav-elt"><a href="#" class="link">HOME</a></div>
+                <div class="nav-elt"><a href="home.php" class="link">HOME</a></div>
                 <div class="nav-elt"><a href="#" class="link">ABOUT</a></div>
                 <div class="nav-elt"><a href="catalogue.php" class="link">BROWSE</a></div>
-                <i class='bx bxs-lock-alt nav-elt lock' style="color:red"></i>
+                <a href="login.php"><i class='bx bxs-lock-alt nav-elt lock' style="color:red"></i></a>
               
 
             </div>
@@ -154,21 +154,21 @@
       
           <div class="row mt-4">
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#bmwidlink" target="_blank">
                       <img src="assets/bmw.png" alt="BMW Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#harleyidlink" target="_blank">
                       <img src="assets/harleylogo.png" alt="Harley-Davidson Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#hondaidlink" target="_blank">
                       <img src="assets/honda.png" alt="Honda Logo" class="img-fluid img-logo" id="small-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
@@ -181,7 +181,7 @@
       
           <div class="row mt-4 " id="lastligne">
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#suzukiidlink" target="_blank">
                       <img src="assets/suzukilogo.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
@@ -189,14 +189,14 @@
               </div>
               
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#kawasakiidlink" target="_blank">
                       <img src="assets/kawasakilogo.png" alt="Kawasaki Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
                   </a>
               </div>
               <div class="col-lg-4 col-md-6 text-center">
-                  <a href="#" target="_blank">
+                  <a href="catalogue.php#yamahaidlink" target="_blank">
                       <img src="assets/yamaha.png" alt="Yamaha Logo" class="img-fluid img-logo" data-aos="fade-up"
                       data-aos-delay="10"
                       data-aos-duration="500">
@@ -276,7 +276,7 @@
           $(document).ready(function () {
               // Show/hide scroll button based on scroll position
               $(window).scroll(function () {
-                if ($(this).scrollTop() < 600) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
+                if ($(this).scrollTop() < 1000) { // Reduce the value to make the button appear sooner (changer la valeur 600 aprés)
                   $('#scrollToBottomBtn').fadeIn();
                 } else {
                   $('#scrollToBottomBtn').fadeOut();
