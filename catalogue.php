@@ -55,7 +55,7 @@ $result = mysqli_query($conn, $sql);
                 <div class="nav-logo"><img src="logo1.png" alt="Logo"></div>
                 <div class="nav-elt"><a href="home.php" class="link">HOME</a></div>
                 <div class="nav-elt"><a href="#" class="link">BROWSE</a></div>
-                <i class='bx bx-shopping-bag nav-elt' id="cart-icon"></i>
+                <i class='bx bx-cart nav-elt' id="cart-icon"></i>
             </div> 
          </div> 
                 <!-- Cart -->
