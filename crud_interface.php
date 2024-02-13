@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <title>Admin Interface</title>
 </head>
@@ -47,7 +46,7 @@
         }
 
         th {
-            background-color: #4caf50;
+            background-color: red;
             color: #fff;
         }
 
@@ -55,13 +54,13 @@
             display: inline-block;
             margin-top: 10px;
             padding: 8px 12px;
-            background-color: #4caf50;
+            background-color: red;
             color: #fff;
             text-decoration: none;
         }
 
         a:hover {
-            background-color: #c9371a;
+            background-color: black;
         }
     </style>
     <a href="login.php" class="login-link">

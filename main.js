@@ -32,6 +32,26 @@ function ready (){
 function removeCartItem(event) {
     var buttonClicked = event.target;
     buttonClicked.parentElement.remove();
+    var notificationBox = document.createElement("div");
+             notificationBox.classList.add("notification");
+             notificationBox.innerText = "Removed successfully";
+             document.body.appendChild(notificationBox);
+
+    // Style the notification box
+             notificationBox.style.position = "fixed";
+             notificationBox.style.bottom = "20px";
+             notificationBox.style.left = "50%";
+             notificationBox.style.transform = "translateX(-50%)";
+             notificationBox.style.backgroundColor = "green";
+             notificationBox.style.border = "1px solid #ccc";
+             notificationBox.style.padding = "10px";
+             notificationBox.style.borderRadius = "5px";
+             notificationBox.style.color = "white";
+
+             setTimeout(function () {
+                notificationBox.style.display = "none";
+            }, 2000);
+
     updatetotal();
 }
 // Add To Cart
@@ -60,36 +80,78 @@ function addCartClicked(event) {
 
 }
 
-function addProductToCart(title, price,condition, mileage, productImg) {
+function addProductToCart(title, price, condition, mileage, productImg) {
     var cartShopBox = document.createElement("div");
-    cartShopBox.classList.add('cart-box')
-    var cartItems = document.getElementsByClassName("cart-content" )[0];
+    cartShopBox.classList.add('cart-box');
+    var cartItems = document.getElementsByClassName("cart-content")[0];
     var cartItemsNames = cartItems.getElementsByClassName("cart-product-title");
+
     for (var i = 0; i < cartItemsNames.length; i++) {
-        console.log("Cart item title:", cartItemsNames[i].innerText);
-        console.log("Product title:", title);
-        if (cartItemsNames[i].innerText.trim().toLowerCase() === title.trim().toLowerCase()){
-        alert("You have already added this item to cart");
-        return;
+        if (cartItemsNames[i].innerText.trim().toLowerCase() === title.trim().toLowerCase()) {
+            var notificationBox = document.createElement("div");
+             notificationBox.classList.add("notification");
+             notificationBox.innerText = "You have already added this item to cart";
+             document.body.appendChild(notificationBox);
+
+    // Style the notification box
+             notificationBox.style.position = "fixed";
+             notificationBox.style.bottom = "20px";
+             notificationBox.style.left = "50%";
+             notificationBox.style.transform = "translateX(-50%)";
+             notificationBox.style.backgroundColor = "yellow";
+             notificationBox.style.border = "1px solid #ccc";
+             notificationBox.style.padding = "10px";
+             notificationBox.style.borderRadius = "5px";
+             notificationBox.style.color = "red";
+
+             setTimeout(function () {
+                notificationBox.style.display = "none";
+            }, 2000);
+            return;
         }
     }
-    var cartBoxContent=`
-                            <img src="${productImg}" alt="" class="cart-img">
-                            <div class="detail-box">
-                                <div class="cart-product-title">${title}</div>
-                                <div class="cart-product-condition">${condition}</div>
-                                <div class="cart-product-mileage">${mileage}</div>
-                                <div class="cart-product-price">${price}</div>
-                            </div>
-                            <!-- Remove Cart -->
-                            <i class='bx bxs-trash-alt cart-remove'></i>`;
+
+    var cartBoxContent = `
+        <img src="${productImg}" alt="" class="cart-img">
+        <div class="detail-box">
+            <div class="cart-product-title">${title}</div>
+            <div class="cart-product-condition">${condition}</div>
+            <div class="cart-product-mileage">${mileage}</div>
+            <div class="cart-product-price">${price}</div>
+        </div>
+        <!-- Remove Cart -->
+        <i class='bx bxs-trash-alt cart-remove'></i>
+    `;
     cartShopBox.innerHTML = cartBoxContent;
     cartItems.append(cartShopBox);
-    cartShopBox
-        .getElementsByClassName("cart-remove")[0]
-        .addEventListener("click", removeCartItem);
-}
 
+    // Show notification at the bottom of the current view
+    var notificationBox = document.createElement("div");
+    notificationBox.classList.add("notification");
+    notificationBox.innerText = "Product added to cart";
+    document.body.appendChild(notificationBox);
+
+    // Style the notification box
+    notificationBox.style.position = "fixed";
+    notificationBox.style.bottom = "20px";
+    notificationBox.style.left = "50%";
+    notificationBox.style.transform = "translateX(-50%)";
+    notificationBox.style.backgroundColor = "red";
+    notificationBox.style.border = "1px solid #ccc";
+    notificationBox.style.padding = "10px";
+    notificationBox.style.borderRadius = "5px";
+    notificationBox.style.color = "white";
+
+
+
+    // Hide notification after 3 seconds
+    setTimeout(function () {
+        notificationBox.style.display = "none";
+    }, 2000);
+
+    // Remove the cart box when clicking the trash icon
+    cartShopBox.getElementsByClassName("cart-remove")[0].addEventListener("click", removeCartItem);
+}
 // Update Total
 function updatetotal() {
     var cartContent = document.getElementsByClassName("cart-content")[0];
@@ -123,3 +185,7 @@ function updatetotal() {
 document.querySelector('.btn-buy').addEventListener('click', function(event) {
     updatetotal(); // Make sure this updates the hidden input value
 });
+
+
+
+

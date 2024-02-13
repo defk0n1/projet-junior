@@ -152,7 +152,7 @@
             
           </div>
      
-      <div class="container mt-5">
+      <div class="container mt-5 brandsection">
           <h3 class="display-2 text-center brand-head">Begin Your Journey</h3>
       
           <div class="row mt-4">
@@ -180,9 +180,9 @@
               
               
               
-          </div>
+          
       
-          <div class="row mt-4 " id="lastligne">
+          
               <div class="col-lg-4 col-md-6 text-center">
                   <a href="catalogue.php#suzukiidlink" target="_blank">
                       <img src="assets/suzukilogo.png" alt="Suzuki Logo" class="img-fluid img-logo" data-aos="fade-up"
@@ -214,10 +214,8 @@
                     <div class="address details">
                         <i class="fas fa-map-marker-alt"></i>
                         <div class="topic">Address</div>
-                        <div class="text-one">3500 Deer Creek Road
-                            Palo Alto,</div> 
-                        <div class="text-one">CA 94304</div>    
-                        <div class="text-one">USA</div> 
+                        <div class="text-one">Cité Technologique des Communications Rte de Raoued Km 3,5 - 2083, Ariana Tunisie</div> 
+                        
                     </div>
                     <div class="phone details">
                         <i class="fas fa-phone-alt"></i>
@@ -228,7 +226,7 @@
                         <i class="fas fa-envelope"></i>
                         <div class="topic">Email</div>
                         
-                        <div class="text-one">NightRiders@gmail.com </div>
+                        <div class="text-one">support@nightriders.com </div>
                     </div>
                     
                 </div>
