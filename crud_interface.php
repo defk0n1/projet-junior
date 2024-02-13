@@ -47,7 +47,7 @@
         }
 
         th {
-            background-color: #4caf50;
+            background-color: red;
             color: #fff;
         }
 
@@ -55,13 +55,13 @@
             display: inline-block;
             margin-top: 10px;
             padding: 8px 12px;
-            background-color: #4caf50;
+            background-color: red;
             color: #fff;
             text-decoration: none;
         }
 
         a:hover {
-            background-color: #c9371a;
+            background-color: black;
         }
     </style>
     <a href="login.php" class="login-link">
