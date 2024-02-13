@@ -77,7 +77,8 @@ html{
     text-decoration: none;
     font-size: 18px;
     font-family: 'Roboto Condensed', sans-serif;
-    
+    font-weight: 400;
+    line-height: 1.5;
   
   
     
@@ -169,6 +170,23 @@ html{
     }
 }
   
+.btn-custom {
+    color: rgb(202, 199, 199); /* Text color */
+    border: 1px solid rgb(202, 199, 199); /* Border color and width */
+    background-color: transparent; /* Transparent background */
+    border-radius: 0px;
+    transition: all 0.3s ease; /* Transition effect */
+    margin-top: 2%;
+    
+}
+
+.btn-custom:hover {
+    background-color: rgba(255, 255, 255, 0); /* Background color on hover */
+    color: rgb(255, 0, 0); /* Text color on hover */
+    border: 1px solid red;
+
+
+}
   
 
  a:hover{
@@ -189,6 +207,7 @@ html{
     display: grid;
     grid-template-columns: repeat(1,1fr);
     align-items: center;
+    font-family: "Roboto Condensed";
 
 }
 .main-text h5{
@@ -254,8 +273,8 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
-    background-color:rgb(4, 4, 4);
-    font-family: "Poppins" , sans-serif;
+    background-color:rgb(0, 0, 0);
+    font-family: "Bebas Neue" , sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
@@ -264,37 +283,46 @@ html{
     width: 100%;
     
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 .containerr{
     width: 60%;
-    background: #dcdada;
-    height: 330px;
+    background: #000000;
+    height: auto;
     border-radius: 6px;
-    padding: 10px 40px 20px 30px;
+    padding: 5px 5px 5px 5px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    margin-top: -120px;
+    
 }
+.containerr p, .containerr strong{ 
+    text-align:center;
+    color: white
+
+}
+
+
 .containerr .contentt{
-    display: flex;
+    display: flex; 
     align-items: center;
     justify-content: space-between;
 }
 .containerr .contentt .left-side{
-    width: 25%;
+    width: 35%;
     height: 80%;   
 }
 .contentt .left-side .details{
-    margin: 14px;
+    margin: 20px;
     text-align: center;
 }
 .contentt .left-side .details i{
-    font-size: 30px;
+    font-size: 20px;
     color: #ec6868;
     margin-bottom: 10px;
 }
 .contentt .left-side .details .topic{
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
+    color: white;
 }
 .contentt .left-side::before{
     content: '';
@@ -312,7 +340,7 @@ html{
   color: #6d6d72;
 }
 .containerr .content .right-side {
-    width: 75%;
+    width: 65%;
     height: 100%; 
     margin-left: 75px;  
 }
@@ -321,7 +349,7 @@ html{
     font-weight: 600;
     color:#ee5555 ;
     text-align:center;   
-    font-family:"Playfair Display", serif; 
+    font-family:"Roboto Condensed", serif; 
     text-transform:uppercase;
     letter-spacing:1px;
 }
@@ -330,10 +358,17 @@ html{
     height:50px ;
     width: 100%;
     margin: 12px 0;
+    text-align: center;
 }
 .right-side .input-box input{
     height: 100%;
     width: 70%;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -349,14 +384,14 @@ html{
     background-color: #bec4f7;
 }
 .last {
-    padding:5px 0;
+    
     color:#ffffff;
     position:absolute;
     bottom: 0px;
-    min-height: 60px;
+    min-height: 10%;
     width: 100%;
     background: #EC3C2C    ;
-    padding: 20px 50px;
+    padding: 0 0 5px 0;
     
 }
 .last .social{
@@ -399,28 +434,28 @@ html{
 }
 .last.wave#wave1
 {
-    z-index: 1000;
+    z-index: 10;
     opacity: 1;
     bottom: 0;
     animation: animateWave_2 4s linear infinite;
 }
 .last .wave#wave2
 {
-    z-index: 999;
+    z-index: 9;
     opacity: 0.5;
     bottom: 10px;
     animation: animateWave 4s linear infinite;
 } 
 .last .wave#wave3
 {
-    z-index: 1000;
+    z-index: 10;
     opacity: 0.3;
     bottom: 15px;
     animation: animateWave_2 3s linear infinite;
 }
 .last .wave#wave4
 {
-    z-index: 999;
+    z-index: 9;
     opacity: 0.7;
     bottom: 20px;
     animation: animateWave 3s linear infinite;
@@ -520,4 +555,70 @@ html{
 
 }
 
+  
+@media only screen and (max-width: 1100px) {
+    .containerr {
+        width: 80%; 
+        transition: width 0.3s ease;
+    }
+    .contentt .left-side {
+        width: 35%; 
+    }
+    .contentt .right-side {
+        width: 65%; 
+    } 
+    }
+
+
+@media only screen and (max-width: 900px) {
+    .containerr {
+        width: 90%;
+        transition: width 0.3s ease;
+    }
+    .containerr .contentt .left-side::before {
+        display: none; 
+    }
+    .contentt .left-side .details,
+    .contentt .right-side .par11 {
+        font-size: 16px; 
+    }
+    .contentt .right-side .topic-text {
+        font-size: 20px; 
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .containerr {
+        width: 100%;
+        transition: width 0.3s ease;
+        
+    }
+    .containerr .contentt .left-side,
+    .containerr .contentt .right-side { 
+        margin-left: 0; 
+    }
+    .right-side .input-box input,
+    .right-side  {
+        width: 70%;
+        
+        
+    }
+    .contentt .left-side .details,
+    .contentt .right-side .par11 {
+        font-size: 14px; 
+        width: 90%;
+    }
+    .contentt .right-side .topic-text {
+        font-size: 18px; 
+    }
+    .topic-text{
+        font-size: 20px;
+        width: 90%;
+    }
+
+    form{
+        width: 90%;
+    }
+}
+  
   

@@ -191,6 +191,9 @@ i.nav-elt {
 }
 
 }
+.brandsection{
+  margin-bottom: 3rem!important;
+}
 
 
 
@@ -397,36 +400,38 @@ i.nav-elt {
   width: 100%;
   
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 .containerr{
   width: 60%;
   background: #dcdada;
-  height: 330px;
+  height: auto;
   border-radius: 6px;
-  padding: 10px 40px 20px 30px;
+  padding: 5px 5px 5px 5px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-  margin-top: -120px;
+  
 }
+
 .containerr .contentt{
-  display: flex;
+  display: flex; 
   align-items: center;
   justify-content: space-between;
 }
 .containerr .contentt .left-side{
-  width: 25%;
+  width: 35%;
   height: 80%;   
 }
 .contentt .left-side .details{
-  margin: 14px;
+  margin: 20px;
   text-align: center;
 }
 .contentt .left-side .details i{
-  font-size: 30px;
+  font-size: 20px;
   color: #ec6868;
   margin-bottom: 10px;
 }
 .contentt .left-side .details .topic{
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
 }
 .contentt .left-side::before{
@@ -445,7 +450,7 @@ font-size: 14px;
 color: #6d6d72;
 }
 .containerr .content .right-side {
-  width: 75%;
+  width: 65%;
   height: 100%; 
   margin-left: 75px;  
 }
@@ -482,14 +487,14 @@ color: #6d6d72;
   background-color: #bec4f7;
 }
 .last {
-  padding:5px 0;
+  
   color:#ffffff;
   position:absolute;
   bottom: 0px;
-  min-height: 60px;
+  min-height: 10%;
   width: 100%;
   background: #EC3C2C    ;
-  padding: 20px 50px;
+  padding: 0 0 5px 0;
   
 }
 .last .social{

@@ -1,3 +1,29 @@
+<?php
+$conn = mysqli_connect("localhost", "root", "", "moto");
+if (!$conn) {
+  die("no connection");
+}
+if(isset($_POST['submit'])){
+
+$email = $_POST['mail'];
+$password = $_POST['pass'];
+$query = "select * from `user` where `username`='$email' and `password`='$password'";
+$result = $conn->query($query);
+$row = $result -> fetch_assoc();
+$count= mysqli_num_rows($result);
+if($count==1){
+  header("Location: crud_interface.php");
+}
+else{
+  echo '<script>
+       window.location.href ="login.php";
+       alert("Login failed. Invalid username or password.") 
+       </script>';
+}
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,25 +36,18 @@
 <body>
 
     <div class="wrapper">
-        <form action="">
+        <form method="POST">
             <h1>Login</h1>
             <div class="input-box">
-                <input type="text" placeholder="Username" required>
+                <input type="text" placeholder="Username" name="mail" required>
                 <i class='bx bxs-user'></i>
             </div>
             <div class="input-box">
-                <input type="password" placeholder="Password" required>
+                <input type="password" placeholder="Password" name="pass" required>
                 <i class='bx bxs-lock-alt'></i>
             </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox"> Remember me</label>
-                <a href="#">Forgot password?</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
+            <button type="submit" name="submit" class="btn">Login</button>
         </form>
-        <div class="register-link">
-            <p>Don't have an account? <a href="#">Register</a></p>
-        </div>
     </div>
 
 </body>
