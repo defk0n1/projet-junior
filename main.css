@@ -163,7 +163,7 @@ html{
     align-items: center;
     justify-content: space-between;
     min-height: 38.28vw;
-    background-color: white;
+    background-color: rgb(255, 255, 255);
    
 }
 .brand-image img{
@@ -191,15 +191,13 @@ html{
 .browseproducts:hover {
     background: #ffffff;
     text-decoration: none;   
+    color: red;
 }
 .browseproducts a{
     text-decoration: none;
     color: rgb(255, 255, 255);
 }
-.browseproducts a:hover{
-    text-decoration: none;
-    color: rgb(255, 0, 0);
-}
+
 .brand-products { 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;

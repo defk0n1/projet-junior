@@ -11,8 +11,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="catalogue.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
@@ -154,7 +152,7 @@ $result = mysqli_query($conn, $sql);
             <div class="brand-synopsis">
                 <h1>Harley-Davidson</h1>
                 <p>Harley-Davidson, an iconic American manufacturer since 1903, epitomizes freedom and individuality with its classic cruiser-style motorcycles. Its models, including touring bikes and custom builds, symbolize a rich heritage and the spirit of the open road.</p>
-                <button class="browseproducts"><a href="#productsharley">BROWSE</a></button>
+                <a href="#productsharley"><button class="browseproducts">BROWSE</button></a>
             </div>
            
     </div>
@@ -201,7 +199,7 @@ $result = mysqli_query($conn, $sql);
             <div class="brand-synopsis">
                 <h1>HONDA</h1>
                 <p>Honda Motor Company, renowned for engineering excellence, offers a wide range of motorcycles. From commuter-friendly scooters to high-performance sport bikes and touring motorcycles, Honda caters to diverse rider preferences.</p>
-                <button class="browseproducts"><a href="#productshonda">BROWSE</a></button>
+                <a href="#productshonda"><button class="browseproducts">BROWSE</button></a>
             </div>
            
     </div>
@@ -248,7 +246,7 @@ $result = mysqli_query($conn, $sql);
             <div class="brand-synopsis">
                 <h1>SUZUKI</h1>
                 <p>Suzuki Motor Corporation, a Japanese stalwart, is known for exceptional performance and affordability. Suzuki's diverse lineup includes sport bikes, cruisers, adventure models, and off-road motorcycles, showcasing engineering excellence and innovation.</p>
-                <button class="browseproducts"><a href="#productssuzuki">BROWSE</a></button>
+                <a href="#productssuzuki"><button class="browseproducts">BROWSE</button></a>
             </div>
            
     </div>
@@ -295,7 +293,7 @@ $result = mysqli_query($conn, $sql);
             <div class="brand-synopsis">
                 <h1>KAWASAKI</h1>
                 <p>Kawasaki, a prominent Japanese manufacturer, is celebrated for its powerful and innovative motorcycles. With a diverse range encompassing sport bikes, cruisers, and off-road machines, Kawasaki delivers exhilarating performance and cutting-edge technology.</p>
-                <button class="browseproducts"><a href="#productskawasaki">BROWSE</a></button>
+                <a href="#productskawasaki"><button class="browseproducts">BROWSE</button></a>
             </div>
            
     </div>
@@ -342,7 +340,7 @@ $result = mysqli_query($conn, $sql);
             <div class="brand-synopsis">
                 <h1>YAMAHA</h1>
                 <p>Yamaha Motor Company, a Japanese giant, excels in innovation, reliability, and versatility. Yamaha's range spans agile sport bikes to rugged adventure models and efficient scooters, offering exhilarating riding experiences.</p>
-                <button class="browseproducts"><a href="#productsyamaha">BROWSE</a></button>
+                <a href="#productsyamaha"><button class="browseproducts">BROWSE</button></a>
             </div>
            
     </div>
